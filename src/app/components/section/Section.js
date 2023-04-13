@@ -2,15 +2,15 @@ export default function Section() {
   return (
     <div
       id="section"
-      className="h-screen flex flex-col flex-wrap justify-center text-black text-center bg-[#abd8e4]   w-[1280px]"
+      className="h-screen w-full flex flex-col  justify-center  text-black text-center bg-[#abd8e4] lg:w-[100%] xl:w-[1280px] "
     >
-      <div className="">
-        <h1 className="text-4xl font-semibold"> Habilidade e Experiencias </h1>
+      <div className="text-3xl mt-5 md:text-4xl font-semibold">
+        <h1 className=""> Habilidade e Experiencias </h1>
       </div>
-      <div className="flex flex-row justify-evenly  mt-10">
-        <div className="flex flex-col w-[400px] h-[500px] border-2 bg-blue-500 rounded-3xl shadow-md shadow-black">
-          <h2 className="text-2xl mt-6 mb-6">Habilidades</h2>
-          <ul className="flex flex-col justify-left text-center space-y-12 m-4">
+      <div className="flex flex-col gap-5 mt-2 md:flex-row  md:justify-evenly md:mt-10 lg:flex lg:justify-evenly lg:mt-10">
+        <div className="flex flex-col w-[450px] m-auto border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
+          <h2 className="text-2xl mt-3 font-semibold md:mt-10">Habilidades</h2>
+          <ul className="flex flex-col justify-left text-center space-y-4 md:m-auto">
             <li>
               <span className="font-semibold text-xl">
                 Linguagens de programação:
@@ -28,16 +28,15 @@ export default function Section() {
               <br /> SQL (MySQL, PostgreSQL), NoSQL (MongoDB)
             </li>
             <li>
-              <span className="font-semibold text-xl">
+              <span className="font-semibold text-xl ">
                 Ferramentas e plataformas:
               </span>
               <br /> Git, GitHub, npm, ESLint
             </li>
           </ul>
         </div>
-
-        <div className="w-[400px] h-[500px] border-2 bg-blue-500 mr-8 rounded-3xl shadow-md shadow-black">
-          <h1 className="text-2xl mt-6 mb-6">Experiencias</h1>
+        <div className=" w-[450px] h-52 m-auto border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
+          <h1 className="text-2xl mt-3 font-semibold md:mt-10">Experiencias</h1>
         </div>
       </div>
     </div>

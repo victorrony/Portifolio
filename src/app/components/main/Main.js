@@ -5,17 +5,17 @@ export default function Main() {
   return (
     <div
       id="main"
-      className="flex h-screen gap-20  bg-blue-500 w-[1280px] text-black"
+      className="flex flex-col-reverse justify-center w-full align-middle h-screen  bg-blue-500  text-black lg:w-[100%] xl:w-[1280px] xl:flex-row xl:justify-center xl:align-middle"
     >
-      <div className=" ">
+      <div className="flex my-10 m-auto">
         <img
           src="/pc.webp"
-          className="w-[490px] h-[396px] mt-32 ml-32 rounded-full "
+          className="w-96 h-64 rounded-full md:w-[390px] md:h-[306px] xl:w-[430px] xl:h-[406px] xl:m-auto"
         />
       </div>
-      <div className="mt-32  w-[575px] text-center ">
-        <h1 className=" text-black text-3xl my-8 font-semibold">Sobre Mim</h1>
-        <p className="m-8">
+      <div className="mt-20 flex flex-col justify-center text-center items-center lg:mt-16 xl:m-auto">
+        <h1 className=" text-black text-3xl  font-semibold">Sobre Mim</h1>
+        <p className="w-[460px] mt-3 md:w-[550px]">
           Olá, Éu sou{" "}
           <span className="font-semibold">Victor Rony Pereira Fernandes,</span>{" "}
           um desenvolvedor <span className="font-semibold">Full Stack</span>{" "}
@@ -27,7 +27,7 @@ export default function Main() {
           amigo me apresentou o Desemvolvimento web.
         </p>
 
-        <div className="flex justify-center m-auto w-80 mt-10">
+        <div className="flex justify-center m-auto w-70 my-5">
           <ul className=" space-x-16 flex ">
             <li>
               <a
