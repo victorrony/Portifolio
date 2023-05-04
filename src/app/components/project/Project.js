@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import Projectos from "../projectos/Projectos";
+import DescriptionOfProject from "../descriçao de projecto/DescriptionOfProject";
 
 export default function Project() {
   const [activeContent, setActiveContent] = useState([null]);
@@ -22,8 +23,8 @@ export default function Project() {
       <div className="text-center mt-16 md:mt-20">
         <h1 className="text-4xl font-semibold">Projectos</h1>
       </div>
-      <div className="flex flex-col m-auto xl:flex-row xl:gap-10 xl:mt-30">
-        <div className=" flex w-[450px] h-52 justify-center m-auto border-2 bg-[#abd8e4] rounded-3xl shadow-md shadow-black md:w-[580px] md:h-[200px] lg:w-[570px] lg:h-[200px] xl:flex-col xl:justify-center xl:m-auto xl:w-[250px] xl:h-[500px]">
+      <div className="flex flex-col m-auto  xl:flex-row xl:gap-10 xl:mb-12">
+        <div className=" flex w-[460px] h-52 justify-center m-auto border-2 bg-[#abd8e4] rounded-3xl shadow-md shadow-black md:w-[580px] md:h-[200px]  lg:flex  lg:w-[570px] lg:h-[200px] xl:flex-col xl:justify-center xl:my-4 xl:w-[250px] xl:h-[560px]">
           <Projectos
             href="https://github.com/victorrony/Encantar.CV"
             label="premioCac"
@@ -32,7 +33,7 @@ export default function Project() {
             handleMouseOver={() => handleMouseOver("p1")}
           />
           <Projectos
-            href=""
+            href="https://github.com/victorrony/Month-Calender"
             label="Month-Calendar"
             description="HTML, CSS, JavaScript"
             handleMouseOut={handleMouseOut}
@@ -46,64 +47,34 @@ export default function Project() {
             handleMouseOver={() => handleMouseOver("p3")}
           />
         </div>
-        <div className="w-[450px] h-[300px] mt-4 border-2 bg-[#abd8e4] flex flex-col justify-center rounded-3xl shadow-md shadow-black md:w-[600px] md:h-[300px] lg:w-[700px] lg:h-[300px] xl:my-auto">
+        <div className="w-[460px] h-[300px] mt-4 lg:mb-16 border-2 bg-[#abd8e4] flex flex-col justify-center rounded-3xl shadow-md shadow-black md:w-[600px] md:h-[300px] lg:w-[700px] lg:h-[300px] xl:my-auto">
           {activeContent === "p1" && (
-            <div className="w-[400px] md:w-[550px] md:h-[250px] border-2 m-auto shadow-lg shadow-black rounded-3xl lg:w-[650px] lg:h-[250px]">
-              <p className="mt-3">
-                um aplicativo provedor do cliente que para além de avaliar o
+            <DescriptionOfProject
+              descriçao="um aplicativo provedor do cliente que para além de avaliar o
                 atendimento deverá suportar outras valências direcionado para as
-                empresas.
-              </p>
-              <h2 className="mt-5 text-lg font-semibold">funcionalidades:</h2>
-              <ol>
-                <li>Criação de perfil de clientes.</li>
-                <li>Fazer Avaliação no seu melhor atendidor.</li>
-              </ol>
-              <p className="mt-5">
-                <span className="mt-10 text-lg font-semibold">
-                  Tecnologias utilizadas:
-                </span>
-                React, Next.js, tailwindcss, strapi.
-              </p>
-            </div>
+                empresas."
+              funcionalidades1="Criação de perfil de clientes."
+              funcionalidades2="Fazer Avaliação no seu melhor atendidor."
+              tecnologia="React, Next.js, tailwindcss, strapi."
+            />
           )}
           {activeContent === "p2" && (
-            <div className="w-[400px] h-64 md:w-[550px] md:h-[250px] border-2 m-auto shadow-lg shadow-black rounded-3xl lg:w-[650px] lg:h-[250px]">
-              <p className="mt-3">
-                um aplicativo calendario muito flexivel onde pode ver data
-                actual, data passada e data futura .
-              </p>
-              <h2 className="mt-5 text-lg font-semibold">funcionalidades:</h2>
-              <ol>
-                <li>Apresentaçao do calendario.</li>
-                <li>Apresentaçao do mes anterior e proximo mes.</li>
-              </ol>
-              <p className="mt-5">
-                <span className="mt-10 text-lg font-semibold">
-                  Tecnologias utilizadas:
-                </span>
-                HTML, CSS, JavaScript.
-              </p>
-            </div>
+            <DescriptionOfProject
+              descriçao="um aplicativo calendario muito flexivel onde pode ver data
+                actual, data passada e data futura ."
+              funcionalidades1="Apresentaçao do calendario."
+              funcionalidades2="Apresentaçao do mes anterior e proximo mes."
+              tecnologia="HTML, CSS, JavaScript."
+            />
           )}
           {activeContent === "p3" && (
-            <div className="w-[400px] h-64  border-2 m-auto block shadow-lg shadow-black rounded-3xl md:w-[550px] md:h-[250px] lg:w-[650px] lg:h-[250px]">
-              <p className="mt-3">
-                um aplicativo calculadora capaz de fazer varios tipos de
-                calculos.
-              </p>
-              <h2 className="mt-5 text-lg font-semibold">funcionalidades:</h2>
-              <ol>
-                <li>Apresentaçao do calculadora.</li>
-                <li>Calcule como Soma, Subtraçao, Diviçao, Multiplicaçao.</li>
-              </ol>
-              <p className="mt-5">
-                <span className="mt-10 text-lg font-semibold">
-                  Tecnologias utilizadas:
-                </span>
-                HTML, CSS, JavaScript.
-              </p>
-            </div>
+            <DescriptionOfProject
+              descriçao="um aplicativo calculadora capaz de fazer varios tipos de
+                calculos."
+              funcionalidades1="Apresentaçao do calculadora."
+              funcionalidades2="Calcule como Soma, Subtraçao, Diviçao, Multiplicaçao."
+              tecnologia="HTML, CSS, JavaScript."
+            />
           )}
         </div>
       </div>

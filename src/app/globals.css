@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
@@ -11,4 +17,10 @@ body {
   justify-content: center;
   align-items: center;
   
+}
+
+.writing-vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
 }

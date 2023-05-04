@@ -1,12 +1,18 @@
-export default function Projectos({href, label, description, handleMouseOver, handleMouseOut }) {
+export default function Projectos({
+  href,
+  label,
+  description,
+  handleMouseOver,
+  handleMouseOut,
+}) {
   return (
-    <div className="w-36 h-40 border-2  m-auto mx-1 xl:mx-auto xl:h-36 xl:w-50">
+    <div className="w-36 h-40 border-2   mx-1 my-5 xl:mx-auto xl:h-32 xl:w-50">
       <a
         href={href}
         target="blank"
         onMouseOver={() => handleMouseOver("p1")}
         onMouseOut={handleMouseOut}
-        className="flex justify-center mt-8 text-lg font-semibold"
+        className="flex justify-center  text-lg font-semibold"
       >
         <u>{label}</u>
       </a>

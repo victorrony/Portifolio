@@ -7,15 +7,15 @@ export default function Main() {
       id="main"
       className="flex flex-col-reverse justify-center w-full align-middle h-screen  bg-blue-500  text-black lg:w-[100%] xl:w-[1280px] xl:flex-row xl:justify-center xl:align-middle"
     >
-      <div className="flex my-10 m-auto">
+      <div className="flex mb-6 m-auto lg:mb-10 xl:mb-32">
         <img
           src="/pc.webp"
-          className="w-96 h-64 rounded-full md:w-[390px] md:h-[306px] xl:w-[430px] xl:h-[406px] xl:m-auto"
+          className="w-96 h-60 rounded-full lg:w-[390px] lg:h-[290px] xl:w-[430px] xl:h-[430px] xl:ml-20"
         />
       </div>
-      <div className="mt-20 flex flex-col justify-center text-center items-center lg:mt-16 xl:m-auto">
+      <div className="mt-16 flex flex-col justify-center text-center items-center lg:mt-32 xl:m-auto">
         <h1 className=" text-black text-3xl  font-semibold">Sobre Mim</h1>
-        <p className="w-[460px] mt-3 md:w-[550px]">
+        <p className="w-[460px] break-words mt-3 md:w-[550px]">
           Olá, Éu sou{" "}
           <span className="font-semibold">Victor Rony Pereira Fernandes,</span>{" "}
           um desenvolvedor <span className="font-semibold">Full Stack</span>{" "}

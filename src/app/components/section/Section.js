@@ -7,10 +7,10 @@ export default function Section() {
       <div className="text-3xl mt-5 md:text-4xl font-semibold">
         <h1 className=""> Habilidade e Experiencias </h1>
       </div>
-      <div className="flex flex-col gap-5 mt-2 md:flex-row  md:justify-evenly md:mt-10 lg:flex lg:justify-evenly lg:mt-10">
-        <div className="flex flex-col w-[450px] m-auto border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
+      <div className="flex flex-col gap-5 m-auto lg:m-0 mt-2 md:flex-row  md:justify-evenly md:mt-10 lg:flex lg:justify-evenly lg:mt-10">
+        <div className="flex flex-col w-[450px]  border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
           <h2 className="text-2xl mt-3 font-semibold md:mt-10">Habilidades</h2>
-          <ul className="flex flex-col justify-left text-center space-y-4 md:m-auto">
+          <ul className="flex flex-col justify-left text-center  space-y-4 md:m-auto">
             <li>
               <span className="font-semibold text-xl">
                 Linguagens de programação:
@@ -35,7 +35,7 @@ export default function Section() {
             </li>
           </ul>
         </div>
-        <div className=" w-[450px] h-52 m-auto border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
+        <div className=" w-[450px] h-52  border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
           <h1 className="text-2xl mt-3 font-semibold md:mt-10">Experiencias</h1>
         </div>
       </div>
