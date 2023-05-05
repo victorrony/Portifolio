@@ -20,7 +20,7 @@ export default function Project() {
       id="project"
       className="flex flex-col h-screen w-full justify-center m-auto  text-center bg-blue-500  md:w-[100%] lg:w-[100%] xl:w-[1280px]"
     >
-      <div className="text-center mt-16 md:mt-20">
+      <div className="text-center mt-20 md:mt-20">
         <h1 className="text-4xl font-semibold">Projectos</h1>
       </div>
       <div className="flex flex-col m-auto  xl:flex-row xl:gap-10 xl:mb-12">

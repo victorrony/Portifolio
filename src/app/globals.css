@@ -24,3 +24,14 @@ body {
   text-orientation: upright;
   white-space: nowrap;
 }
+
+@media (min-width: 1280px) { 
+
+  .writing-vertical-rl {
+    writing-mode: horizontal-tb;
+    position: relative;
+    height: 20px;
+    margin: auto;
+    
+}
+ }

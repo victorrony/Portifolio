@@ -1,6 +1,6 @@
 export default function DescriptionOfProject({descriçao, funcionalidades1, funcionalidades2, tecnologia}) {
   return (
-    <div className="w-[400px] h-64  border-2 m-auto block shadow-lg shadow-black rounded-3xl md:w-[550px] md:h-[250px] lg:w-[650px] lg:h-[250px]">
+    <div className="w-[400px] h-64  border-2 m-auto  block shadow-lg shadow-black rounded-3xl md:w-[550px] md:h-[250px] lg:w-[650px] lg:h-[250px]">
       <p className="mt-3">
         {descriçao}
       </p>
