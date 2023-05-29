@@ -12,11 +12,11 @@ export default function Projectos({
         target="blank"
         onMouseOver={() => handleMouseOver("p1")}
         onMouseOut={handleMouseOut}
-        className="flex justify-center  text-lg font-semibold"
+        className="flex justify-center  text-base font-semibold"
       >
         <u>{label}</u>
       </a>
-      <p className="mt-5">{description}</p>
+      <p className="mt-3">{description}</p>
     </div>
   );
 }

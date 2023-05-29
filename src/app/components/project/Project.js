@@ -46,6 +46,13 @@ export default function Project() {
             handleMouseOut={handleMouseOut}
             handleMouseOver={() => handleMouseOver("p3")}
           />
+          <Projectos
+            href="https://github.com/victorrony/materialui-typescript"
+            label="Listagem de pessoas e cidade"
+            description="Reactjs, Materialui, typescript"
+            handleMouseOut={handleMouseOut}
+            handleMouseOver={() => handleMouseOver("p4")}
+          />
         </div>
         <div className="w-[460px] h-[300px] mt-4 lg:mb-16 border-2 bg-[#abd8e4] flex flex-col justify-center rounded-3xl shadow-md shadow-black md:w-[600px] md:h-[300px] lg:w-[700px] lg:h-[300px] xl:my-auto">
           {activeContent === "p1" && (
@@ -74,6 +81,14 @@ export default function Project() {
               funcionalidades1="Apresentaçao do calculadora."
               funcionalidades2="Calcule como Soma, Subtraçao, Diviçao, Multiplicaçao."
               tecnologia="HTML, CSS, JavaScript."
+            />
+          )}
+          {activeContent === "p4" && (
+            <DescriptionOfProject
+              descriçao="um aplicativo de listagem de pessoas e cidades."
+              funcionalidades1="Apresentaçao da listagem de pessoas e cidades."
+              funcionalidades2=" Utilizando o backEnd json-server"
+              tecnologia="Reactjs, Materialui, typeScript"
             />
           )}
         </div>

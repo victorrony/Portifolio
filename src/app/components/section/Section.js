@@ -4,7 +4,7 @@ export default function Section() {
       id="section"
       className="h-screen w-full flex flex-col  justify-center  text-black text-center bg-[#abd8e4] lg:w-[100%] xl:w-[1280px] "
     >
-      <div className="text-3xl mt-24 md:text-4xl font-semibold lg:mt-0">
+      <div className="text-3xl mt-20 md:text-4xl font-semibold lg:mt-0">
         <h1 className=""> Habilidade e Experiencias </h1>
       </div>
       <div className="flex flex-col gap-5 m-auto lg:m-0 mt-2 md:flex-row  md:justify-evenly  lg:flex lg:justify-evenly lg:mt-10">

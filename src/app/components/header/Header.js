@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NavBar from "../navbar/NavBar";
+// import NavBar from "../navbar/NavBar";
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 export default function Header() {
@@ -9,10 +9,10 @@ export default function Header() {
         id="home"
         className="bg-[#abd8e4] h-screen w-full content-center justify-items-center items-center  md:w-100% lg:w-[100%] xl:w-[1280px]"
       >
-        <NavBar />
+        
         <div className="flex flex-col flex-wrap  xl:flex-row  xl:h-screen">
-          <div className="flex place-content-between ml-6  lg:ml-72 xl:flex-col xl:ml-20">
-            <div className="flex flex-col text-center  w-96 mt-32 text-black lg:mt-24  xl:mt-[70%] ">
+          <div className="flex place-content-between ml-6  xl:flex-col xl:ml-20">
+            <div className="flex flex-col text-center  w-96 mt-14 m-auto text-black lg:mt-24  xl:mt-[70%] ">
               <h2>
                 <span className="font-bold">Olá,</span> o meu nome é{" "}
                 <span className="font-bold">Victor Rony.</span> Sou um
