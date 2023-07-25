@@ -7,7 +7,7 @@ export default function Section() {
       <div className="text-3xl mt-20 md:text-4xl font-semibold lg:mt-0">
         <h1 className=""> Habilidade e Experiencias </h1>
       </div>
-      <div className="flex flex-col gap-5 m-auto lg:m-0 mt-2 md:flex-row  md:justify-evenly  lg:flex lg:justify-evenly lg:mt-10">
+      <div className="flex flex-col gap-5 m-auto lg:m-0 mt-8 md:flex-row  md:justify-evenly md:mt-14  lg:flex lg:justify-evenly lg:mt-10">
         <div className="flex flex-col w-[450px]  border-2 bg-blue-500 rounded-3xl shadow-md shadow-black  md:w-[350px] md:h-[450px] ">
           <h2 className="text-2xl mt-3 font-semibold md:mt-10">Habilidades</h2>
           <ul className="flex flex-col justify-left text-center  space-y-4 md:m-auto">

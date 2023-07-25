@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-600 w-full  shadow-lg  xl:w-[1280px] ">
+    <nav className="bg-gray-600 w-full  shadow-lg  xl:w-[1280px] top-0 z-50 sticky">
       <div className=" mx-auto px-4 ">
         <div className="flex justify-between ">
           <div className="flex ">
