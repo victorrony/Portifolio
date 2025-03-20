@@ -5,13 +5,11 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { services, socialLinks } from "@/app/constants";
 import { AboutCard } from "./AboutCard";
+import { SectionWrapper } from "@/app/hoc";
 
-export default function About() {
+const About = () => {
    return (
-      <div
-         id="main"
-         className="flex flex-col mt-10 w-full justify-start h-screen  bg-  text-white lg:w-[100%] xl:w-[1280px] "
-      >
+      <div className="flex flex-col mt-10 w-full justify-start h-screen  bg-  text-white lg:w-[100%] xl:w-[1280px] ">
          <div className="mt-20 flex flex-col justify-items-start lg:mt- ">
             <motion.div variants={textVariant()}>
                <h1 className="text-4xl font-semibold text-white "> Sobre mim </h1>
@@ -29,7 +27,7 @@ export default function About() {
                me apresentou o Desemvolvimento web.
             </motion.p>
 
-            <motion.div className="flex ml-[80px] w-70 my-6">
+            <motion.div className="flex w-70 my-6">
                <ul className=" space-x-16 flex ">
                   {socialLinks.map((link, index) => (
                      <li key={index}>
@@ -49,4 +47,7 @@ export default function About() {
          </div>
       </div>
    );
-}
+};
+
+export default SectionWrapper(About, "about");
+// export default About;

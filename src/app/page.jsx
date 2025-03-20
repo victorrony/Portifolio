@@ -2,12 +2,14 @@ import "./globals.css";
 import Experience from "./components/experience/Experience";
 import NavBar from "./components/navbar/NavBar";
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Project from "./components/project/Project";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+import Hero from "./components/hero/Hero";
 
 export default function Home() {
-   const Hero = dynamic(() => import("./components/hero/Hero"), { ssr: false });
+   // const Hero = dynamic(() => import("./components/hero/Hero"), { ssr: false });
 
    return (
       <div className="relative w-full flex flex-col justify-center text-white items-center m-auto z-0 bg-primary">
@@ -18,6 +20,7 @@ export default function Home() {
          <About />
          <Experience />
          <Project />
+         <Contact />
       </div>
    );
 }

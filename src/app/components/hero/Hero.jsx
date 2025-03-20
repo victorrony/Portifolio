@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 import dynamic from "next/dynamic";
+import { socialLinks } from "@/app/constants";
 
 const ComputersCanvas = dynamic(() => import("./Computers"), { ssr: false });
 
@@ -15,15 +14,15 @@ export default function Hero() {
                <span className="font-bold">Full Stack Developer </span>
             </h1>
             <div className="flex justify-end space-x-6 mt-10 xl:mt-[-20px] xl:mr-[80px]">
-               <Link href="https://www.linkedin.com/in/victorfernandes-a41030262/" target="_blank">
-                  <IoLogoLinkedin className="w-6 h-6 text-white hover:text-gray-400" />
-               </Link>
-               <Link href="https://github.com/victorrony" target="_blank">
-                  <IoLogoGithub className="w-6 h-6 text-white hover:text-gray-400" />
-               </Link>
-               <Link href="https://">
-                  <IoLogoWhatsapp className="w-6 h-6 text-white hover:text-gray-400" />
-               </Link>
+               <ul className=" space-x-16 flex ">
+                  {socialLinks.map((link, index) => (
+                     <li key={index}>
+                        <a href={link.href} target="blank">
+                           {link.icon}
+                        </a>
+                     </li>
+                  ))}
+               </ul>
             </div>
          </div>
          <ComputersCanvas />

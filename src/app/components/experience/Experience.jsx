@@ -8,15 +8,13 @@ import { technologies } from "../../constants/index";
 import { experiences } from "../../constants/index";
 import ExperienceCard from "./ExperienceCard";
 import { textVariant } from "@/app/utils/motion";
+import { SectionWrapper } from "@/app/hoc";
 
-export default function Experience() {
+const Experience = () => {
    return (
-      <div
-         id="section"
-         className="flex flex-col h-full w-[1280px] justify-center items-center m-auto text-center text-white md:w-[100%] lg:w-[100%] xl:w-[1280px]"
-      >
+      <div className="flex flex-col h-full w-[1280px] justify-center items-center m-auto text-center text-white md:w-[100%] lg:w-[100%] xl:w-[1280px]">
          <motion.div variants={textVariant()}>
-            <h1 className="text-4xl font-semibold text-primary "> Experiencias e Habilidades </h1>
+            <h1 className="text-4xl font-semibold text-white "> Experiencias e Habilidades </h1>
          </motion.div>
          <div className="flex flex-col items-center gap-5 m-auto lg:m-0 mt-8 md:justify-evenly md:mt-14  lg:flex lg:justify-evenly lg:mt-10">
             <div className="flex flex-col items-center w-full">
@@ -42,4 +40,7 @@ export default function Experience() {
          </div>
       </div>
    );
-}
+};
+
+export default SectionWrapper(Experience, "experience");
+// export default Experience;
