@@ -1,4 +1,5 @@
 "use client";
+import { navLinks } from "@/app/constants";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -6,13 +7,6 @@ const NavBar = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
    const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-   const navLinks = [
-      // { href: "/", label: "Home" },
-      { href: "#main", label: "Sobre Min" },
-      { href: "#section", label: "Experiencias" },
-      { href: "#project", label: "Projectos" },
-   ];
 
    return (
       <>

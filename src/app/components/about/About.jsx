@@ -9,8 +9,8 @@ import { SectionWrapper } from "@/app/hoc";
 
 const About = () => {
    return (
-      <div className="flex flex-col mt-10 w-full justify-start h-screen  bg-  text-white lg:w-[100%] xl:w-[1280px] ">
-         <div className="mt-20 flex flex-col justify-items-start lg:mt- ">
+      <div className="flex flex-col w-full h-screen text-white lg:w-[100%] xl:w-[1280px] ">
+         <div className=" flex flex-col justify-items-start ">
             <motion.div variants={textVariant()}>
                <h1 className="text-4xl font-semibold text-white "> Sobre mim </h1>
             </motion.div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "@/app/utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, source_code_link_vercel }) => {
    return (
       <motion.div
          className="flex flex-col items-center justify-center"
@@ -39,6 +39,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                      #{tag.name}
                   </span>
                ))}
+            </div>
+            <div className="mt-5 flex justify-center items-center gap-3">
+               <a href={source_code_link_vercel} target="_blank" rel="noopener noreferrer">
+                  {source_code_link_vercel && (
+                     <button className="bg-tertiary py-2 px-4 rounded-lg text-white font-medium">Live Demo</button>
+                  )}
+               </a>
             </div>
          </Tilt>
       </motion.div>

@@ -1,3 +1,9 @@
+// Definition of reusable motion variants
+// This file contains reusable motion variants that can be used in components
+
+
+// Variants for text animations
+// These variants can be used for animating text elements
 export const textVariant = (delay) => {
   return {
     hidden: {
@@ -16,6 +22,9 @@ export const textVariant = (delay) => {
   };
 };
 
+
+// Variants for image animations
+// These variants can be used for animating image elements
 export const fadeIn = (direction, type, delay, duration) => {
   return {
     hidden: {
@@ -37,6 +46,9 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
+
+// Variants for zoom animations
+// These variants can be used for animating zoom elements
 export const zoomIn = (delay, duration) => {
   return {
     hidden: {
@@ -56,6 +68,9 @@ export const zoomIn = (delay, duration) => {
   };
 };
 
+
+// Variants for slide animations
+// These variants can be used for animating slide elements
 export const slideIn = (direction, type, delay, duration) => {
   return {
     hidden: {
@@ -75,6 +90,9 @@ export const slideIn = (direction, type, delay, duration) => {
   };
 };
 
+
+// Variants for stagger animations
+// These variants can be used for animating stagger elements
 export const staggerContainer = (staggerChildren, delayChildren) => {
   return {
     hidden: {},

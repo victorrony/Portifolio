@@ -10,14 +10,14 @@ const Project = () => {
    return (
       <>
          <motion.div variants={textVariant()}>
-            <p className="text-3xl mt-3 font-semibold md:mt-10">My work</p>
-            <h2 className="text-3xl font-semibold md:mt-10">Projects.</h2>
+            <p className="text-4xl mt-3 font-semibold">Portfolio</p>
+            <h2 className="text-3xl font-semibold md:mt-10">Featured Projects.</h2>
          </motion.div>
 
          <div>
             <motion.p variants={fadeIn()} className="mt-5 text-secondary text-[17px] max-w-3xl leading-[30px]">
-               I have worked on a wide range of projects, from small personal projects to large-scale applications. Here
-               are some of the projects I have worked on.
+               Below is a selection of projects that showcase my skills and experience. Each project highlights my
+               ability to solve problems and deliver high-quality solutions.
             </motion.p>
          </div>
 

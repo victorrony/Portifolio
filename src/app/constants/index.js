@@ -1,44 +1,13 @@
-import {
-   mobile,
-   backend,
-   creator,
-   web,
-   javascript,
-   typescript,
-   html,
-   css,
-   reactjs,
-   redux,
-   tailwind,
-   nodejs,
-   mongodb,
-   git,
-   figma,
-   docker,
-   meta,
-   starbucks,
-   tesla,
-   shopify,
-   carrent,
-   jobit,
-   tripguide,
-   threejs,
-} from "../../../public/assets";
+// Desc: This file contains all the constants used in the application.
+
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 export const navLinks = [
-   {
-      id: "about",
-      title: "About",
-   },
-   {
-      id: "work",
-      title: "Work",
-   },
-   {
-      id: "contact",
-      title: "Contact",
-   },
+   // { href: "/", label: "Home" },
+   { href: "#about", label: "Sobre Min" },
+   { href: "#experience", label: "Experiencias" },
+   { href: "#projects", label: "Projectos" },
+   { href: "#contact", label: "Contacto" },
 ];
 
 const services = [
@@ -47,17 +16,25 @@ const services = [
       icon: "/assets/web.png",
    },
    {
-      title: "React Native Developer",
+      title: "Frontend Developer",
       icon: "/assets/mobile.png",
    },
    {
       title: "Backend Developer",
       icon: "/assets/backend.png",
    },
+   // {
+   //    title: "UI/UX Designer",
+   //    icon: "/assets/creator.png",
+   // },
    {
-      title: "Content Creator",
-      icon: "/assets/creator.png",
+      title: "Full Stack Developer",
+      icon: "/assets/web.png",
    },
+   // {
+   //    title: "React Native Developer",
+   //    icon: "/assets/web.png",
+   // },
 ];
 
 const technologies = [
@@ -81,10 +58,10 @@ const technologies = [
       name: "React JS",
       icon: "/assets/tech/reactjs.png",
    },
-   {
-      name: "Redux Toolkit",
-      icon: "/assets/tech/redux.png",
-   },
+   // {
+   //    name: "Redux Toolkit",
+   //    icon: "/assets/tech/redux.png",
+   // },
    {
       name: "Tailwind CSS",
       icon: "/assets/tech/tailwind.png",
@@ -109,104 +86,134 @@ const technologies = [
       name: "figma",
       icon: "/assets/tech/figma.png",
    },
-   {
-      name: "docker",
-      icon: "/assets/tech/docker.png",
-   },
+   // {
+   //    name: "docker",
+   //    icon: "/assets/tech/docker.png",
+   // },
 ];
 
 const experiences = [
    {
       title: "React.js Developer",
-      company_name: "Starbucks",
+      company_name: "Sintaxy",
       icon: "/assets/company/starbucks.png",
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "March 2023 - April 2024",
       points: [
          "Developing and maintaining web applications using React.js and other related technologies.",
-         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-         "Implementing responsive design and ensuring cross-browser compatibility.",
-         "Participating in code reviews and providing constructive feedback to other developers.",
+         "I participated in the creation of the website for a full-stack training academy and also in the development of a platform for a university.",
+         "Using Git for version control and collaborating with other developers using GitHub.",
+         "I was responsible for creating and maintaining the front-end of the projects.",
       ],
    },
    {
-      title: "React Native Developer",
-      company_name: "Tesla",
+      title: "Full Stack Developer",
+      company_name: "Sintaxy",
       icon: "/assets/company/tesla.png",
       iconBg: "#E6DEDD",
       date: "Jan 2021 - Feb 2022",
       points: [
-         "Developing and maintaining web applications using React.js and other related technologies.",
+         "Developing and maintaining web applications using Next.js and strapi and other related technologies.",
          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
          "Implementing responsive design and ensuring cross-browser compatibility.",
-         "Participating in code reviews and providing constructive feedback to other developers.",
+         "I was responsible for creating and maintaining the front-end and back-end of the projects.",
       ],
    },
    {
-      title: "Web Developer",
-      company_name: "Shopify",
+      title: "PHP Developer",
+      company_name: "Sintaxy",
       icon: "/assets/company/shopify.png",
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "Feb 2024 - Present",
       points: [
-         "Developing and maintaining web applications using React.js and other related technologies.",
-         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-         "Implementing responsive design and ensuring cross-browser compatibility.",
-         "Participating in code reviews and providing constructive feedback to other developers.",
+         "Developing and maintaining web applications using PHP and other related technologies.",
+         "Creating and maintaining databases to store application data.",
+         "Continuing to provide services to clients and ensuring their satisfaction with delivered solutions.",
+         "I am responsible for creating and maintaining the front-end and back-end of the projects.",
       ],
    },
    {
-      title: "Full stack Developer",
-      company_name: "Meta",
+      title: "Software Tester",
+      company_name: "Sintaxy",
       icon: "/assets/company/meta.png",
       iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      date: "Sept 2024 - Present",
       points: [
-         "Developing and maintaining web applications using React.js and other related technologies.",
-         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-         "Implementing responsive design and ensuring cross-browser compatibility.",
-         "Participating in code reviews and providing constructive feedback to other developers.",
+         "Testing software to ensure the highest quality and reliability.",
+         "Creating test plans, test cases, and test scripts.",
+         "Collaborating with the development team to identify and fix bugs and issues.",
+         "Ensuring that software meets all requirements and specifications.",
       ],
-   },
-];
-
-const testimonials = [
-   {
-      testimonial:
-         "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-   },
-   {
-      testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-   },
-   {
-      testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
    },
 ];
 
 const projects = [
    {
-      name: "Car Rent",
+      name: "Shoes E-commerce",
       description:
-         "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+         "Web application that enables users to search for shoes, view details, and add them to the cart for purchase.",
       tags: [
          {
-            name: "react",
+            name: "nextjs",
             color: "blue-text-gradient",
          },
          {
-            name: "mongodb",
+            name: "@headlessui/react",
+            color: "green-text-gradient",
+         },
+         {
+            name: "@reduxjs/toolkit",
+            color: "pink-text-gradient",
+         },
+         {
+            name: "react-redux",
+            color: "yellow-text-gradient",
+         },
+         {
+            name: "tailwind",
+            color: "violet-text-gradient",
+         },
+      ],
+      image: "/assets/ShoesShop.png",
+      source_code_link: "https://github.com/victorrony/Ecommerce-shoes",
+      source_code_link_vercel: "https://ecommerce-shoes-kappa.vercel.app/",
+   },
+   {
+      name: "Rest_Countries website",
+      description:
+         " A web application that enables users to search for countries and view details like population, area, and borders.",
+      tags: [
+         {
+            name: "nextjs",
+            color: "blue-text-gradient",
+         },
+         {
+            name: "@headlessui/react",
+            color: "green-text-gradient",
+         },
+         {
+            name: "tailwind",
+            color: "pink-text-gradient",
+         },
+         {
+            name: "Axios",
+            color: "blue-text-gradient",
+         },
+      ],
+      image: "/assets/Rest_countries.png",
+      source_code_link: "https://github.com/victorrony/rest-countries",
+      source_code_link_vercel: "https://rest-countries-theta-lime.vercel.app/",
+   },
+   {
+      name: "Space tourism website",
+      description: "A multi-page website that showcases space tourism and enables users to book a trip to space.",
+      tags: [
+         {
+            name: "nextjs",
+            color: "blue-text-gradient",
+         },
+         {
+            name: "react-responsive-carousel",
             color: "green-text-gradient",
          },
          {
@@ -214,50 +221,34 @@ const projects = [
             color: "pink-text-gradient",
          },
       ],
-      image: "/assets/carrent.png",
-      source_code_link: "https://github.com/",
+      image: "/assets/Space_tourism.png",
+      source_code_link: "https://github.com/victorrony/Space-tourism",
+      source_code_link_vercel: "https://space-tourism-ten-neon.vercel.app/",
    },
    {
-      name: "Job IT",
-      description:
-         "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-         {
-            name: "react",
-            color: "blue-text-gradient",
-         },
-         {
-            name: "restapi",
-            color: "green-text-gradient",
-         },
-         {
-            name: "scss",
-            color: "pink-text-gradient",
-         },
-      ],
-      image: "/assets/jobit.png",
-      source_code_link: "https://github.com/",
-   },
-   {
-      name: "Trip Guide",
-      description:
-         "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      name: "Chat GPT clone",
+      description: "A clone of the ChatGPT website that enables users to chat with an AI-powered chatbot.",
       tags: [
          {
             name: "nextjs",
             color: "blue-text-gradient",
          },
          {
-            name: "supabase",
-            color: "green-text-gradient",
-         },
-         {
-            name: "css",
+            name: "tailwind",
             color: "pink-text-gradient",
          },
+         {
+            name: "typescript",
+            color: "blue-text-gradient",
+         },
+         {
+            name: "openai",
+            color: "green-text-gradient",
+         },
       ],
-      image: "/assets/tripguide.png",
-      source_code_link: "https://github.com/",
+      image: "/assets/ChatGPT_clone.png",
+      source_code_link: "https://github.com/victorrony/Clone-chatGPT",
+      source_code_link_vercel: "https://clone-chat-gpt-rho.vercel.app/",
    },
 ];
 const socialLinks = [
@@ -275,4 +266,4 @@ const socialLinks = [
    },
 ];
 
-export { services, technologies, experiences, testimonials, projects, socialLinks };
+export { services, technologies, experiences, projects, socialLinks };

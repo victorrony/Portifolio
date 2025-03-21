@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
+// HOC to wrap sections with stars
+// This HOC wraps the component with a motion section that has a stagger effect
+// and a star span that is used for scrolling to the section
 const StarWrapper = (Component, idName) =>
    function HOC() {
       return (
