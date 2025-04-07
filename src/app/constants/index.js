@@ -2,12 +2,12 @@
 
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
-export const navLinks = [
+const navLinks = [
    // { href: "/", label: "Home" },
-   { href: "#about", label: "Sobre Min" },
-   { href: "#experience", label: "Experiencias" },
-   { href: "#projects", label: "Projectos" },
-   { href: "#contact", label: "Contacto" },
+   { href: "#about", label: "About me" },
+   { href: "#experience", label: "Experience" },
+   { href: "#projects", label: "Projects" },
+   { href: "#contact", label: "Contact" },
 ];
 
 const services = [
@@ -58,10 +58,10 @@ const technologies = [
       name: "React JS",
       icon: "/assets/tech/reactjs.png",
    },
-   // {
-   //    name: "Redux Toolkit",
-   //    icon: "/assets/tech/redux.png",
-   // },
+   {
+      name: "Next JS",
+      icon: "/assets/tech/nextjs.jpeg",
+   },
    {
       name: "Tailwind CSS",
       icon: "/assets/tech/tailwind.png",
@@ -71,25 +71,45 @@ const technologies = [
       icon: "/assets/tech/nodejs.png",
    },
    {
-      name: "MongoDB",
-      icon: "/assets/tech/mongodb.png",
+      name: "MySQL",
+      icon: "/assets/tech/mysql.png",
    },
    {
       name: "Three JS",
-      icon: "/assets/tech/threejs.svg",
+      icon: "/assets/tech/Threejs.png",
+   },
+
+   {
+      name: "Motion",
+      icon: "/assets/tech/motion.png",
+   },
+];
+
+const tolls = [
+   {
+      name: "VS Code",
+      icon: "/assets/tech/vscode.jpeg",
+   },
+   {
+      name: "Postman",
+      icon: "/assets/tech/postman.jpeg",
+   },
+   {
+      name: "Vercel",
+      icon: "/assets/tech/vercel.png",
+   },
+   {
+      name: "Figma",
+      icon: "/assets/tech/figma.png",
    },
    {
       name: "git",
       icon: "/assets/tech/git.png",
    },
    {
-      name: "figma",
-      icon: "/assets/tech/figma.png",
+      name: "GitHub",
+      icon: "/assets/github.png",
    },
-   // {
-   //    name: "docker",
-   //    icon: "/assets/tech/docker.png",
-   // },
 ];
 
 const experiences = [
@@ -156,22 +176,22 @@ const projects = [
          {
             name: "nextjs",
             color: "blue-text-gradient",
+            icon: "/assets/tech/nextjs.jpeg",
          },
          {
             name: "@headlessui/react",
             color: "green-text-gradient",
+            icon: "/assets/tech/@headlessui.png",
          },
          {
             name: "@reduxjs/toolkit",
             color: "pink-text-gradient",
-         },
-         {
-            name: "react-redux",
-            color: "yellow-text-gradient",
+            icon: "/assets/tech/redux.png",
          },
          {
             name: "tailwind",
             color: "violet-text-gradient",
+            icon: "/assets/tech/tailwind.png",
          },
       ],
       image: "/assets/ShoesShop.png",
@@ -184,20 +204,24 @@ const projects = [
          " A web application that enables users to search for countries and view details like population, area, and borders.",
       tags: [
          {
-            name: "nextjs",
+            name: "Nextjs",
             color: "blue-text-gradient",
+            icon: "/assets/tech/nextjs.jpeg",
          },
          {
             name: "@headlessui/react",
             color: "green-text-gradient",
+            icon: "/assets/tech/@headlessui.png",
          },
          {
-            name: "tailwind",
+            name: "Tailwind",
             color: "pink-text-gradient",
+            icon: "/assets/tech/tailwind.png",
          },
          {
             name: "Axios",
             color: "blue-text-gradient",
+            icon: "/assets/tech/axios.png",
          },
       ],
       image: "/assets/Rest_countries.png",
@@ -209,16 +233,19 @@ const projects = [
       description: "A multi-page website that showcases space tourism and enables users to book a trip to space.",
       tags: [
          {
-            name: "nextjs",
+            name: "Nextjs",
             color: "blue-text-gradient",
+            icon: "/assets/tech/nextjs.jpeg",
          },
          {
-            name: "react-responsive-carousel",
+            name: "Responsive-carousel",
             color: "green-text-gradient",
+            icon: "/assets/tech/react-responsive-carousel.png",
          },
          {
-            name: "tailwind",
+            name: "Tailwind",
             color: "pink-text-gradient",
+            icon: "/assets/tech/tailwind.png",
          },
       ],
       image: "/assets/Space_tourism.png",
@@ -230,20 +257,24 @@ const projects = [
       description: "A clone of the ChatGPT website that enables users to chat with an AI-powered chatbot.",
       tags: [
          {
-            name: "nextjs",
+            name: "Nextjs",
             color: "blue-text-gradient",
+            icon: "/assets/tech/nextjs.jpeg",
          },
          {
-            name: "tailwind",
+            name: "Tailwind",
             color: "pink-text-gradient",
+            icon: "/assets/tech/tailwind.png",
          },
          {
-            name: "typescript",
+            name: "Typescript",
             color: "blue-text-gradient",
+            icon: "/assets/tech/typescript.png",
          },
          {
-            name: "openai",
+            name: "Openai",
             color: "green-text-gradient",
+            icon: "/assets/tech/openai.jpeg",
          },
       ],
       image: "/assets/ChatGPT_clone.png",
@@ -266,4 +297,4 @@ const socialLinks = [
    },
 ];
 
-export { services, technologies, experiences, projects, socialLinks };
+export { services, technologies, experiences, projects, socialLinks, navLinks, tolls };

@@ -10,8 +10,7 @@ const Project = () => {
    return (
       <>
          <motion.div variants={textVariant()}>
-            <p className="text-4xl mt-3 font-semibold">Portfolio</p>
-            <h2 className="text-3xl font-semibold md:mt-10">Featured Projects.</h2>
+            <h1 className="text-4xl font-semibold text-white "> Projetos </h1>
          </motion.div>
 
          <div>

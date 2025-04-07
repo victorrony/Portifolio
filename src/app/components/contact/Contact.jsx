@@ -22,13 +22,22 @@ const Contact = () => {
       setLoading(true);
 
       try {
-         await emailjs.send({
+         await emailjs.send(
+            //* "service_2j0x8gk" */ // Replace with your service ID
+            //* "template_9g6o8o6" */ // Replace with your template ID
+            "service_2j0x8gk",
+            "template_9g6o8o6",
+            {
             from_name: form.name,
-            to_name: "JavaScript Mastery",
+            to_name: "Victor Rony Fernandes",
             from_email: form.email,
-            to_email: "sujata@jsmastery.pro",
+            to_email: "victorronyfernandes@gmail.com",
             message: form.message,
-         });
+         },
+         // Replace with your user ID
+         // "user_4Y1Jz8x3a0Z2m4n5lN" // Replace with your user ID
+         "Y1Jz8x3a0Z2m4n5lN"
+      );
          alert("Thank you. I will get back to you as soon as possible.");
          setForm({ name: "", email: "", message: "" });
       } catch (error) {
@@ -45,8 +54,8 @@ const Contact = () => {
             variants={slideIn("left", "tween", 0.2, 1)}
             className="flex-[0.75] bg-black-100 p-8 w-full rounded-2xl"
          >
-            <p className={styles.sectionHeadText}>Contacto</p>
-            <h3 className={styles.sectionSubText}>Me mande um email </h3>
+            <p className={styles.sectionHeadText}>Contact.</p>
+            <h3 className={styles.sectionSubText}> Send me a message </h3>
 
             <form ref={formRef} onSubmit={handleSubmit} className="mt-8 flex flex-col gap-8">
                {["name", "email", "message"].map((field, index) => (

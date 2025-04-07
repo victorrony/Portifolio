@@ -1,16 +1,32 @@
 "use client";
 import { navLinks } from "@/app/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [scrolled, setScrolled] = useState(false);
 
    const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+   useEffect(() => {
+      const handleScroll = () => {
+         const scrollTop = window.scrollY;
+         if (scrollTop > 100) {
+            setScrolled(true);
+         } else {
+            setScrolled(false);
+         }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
+
    return (
       <>
-         <nav className=" w-full xl:w-[1280px] top-0 z-50 sticky">
+         <nav className={`w-full xl:w-[1280px] opacity-1  top-0 z-50 sticky ${scrolled ? "bg-transparent" : "bg-transparent"} `}>
             <div className="mx-auto px-4">
                <div className="flex justify-between">
                   <a href="/" className="flex items-center py-4 px-2 text-white text-2xl font-semibold">

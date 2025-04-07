@@ -1,20 +1,17 @@
 "use client";
 
-// Import the BallCanvas component with dynamic import to avoid hydration issues
 import dynamic from "next/dynamic";
 const BallCanvas = dynamic(() => import("./BallCanvas"), { ssr: false });
 
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
-import { technologies } from "../../constants/index";
-import { experiences } from "../../constants/index";
+import { technologies, experiences, tolls } from "../../constants/index";
 import ExperienceCard from "./ExperienceCard";
-import { textVariant } from "@/app/utils/motion";
+import { fadeIn, textVariant, staggerContainer } from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
 
 const Experience = () => {
-   // Add client-side rendering protection
    const [isClient, setIsClient] = useState(false);
 
    useEffect(() => {
@@ -24,42 +21,71 @@ const Experience = () => {
    }, []);
 
    return (
-      <div
-         id="section"
-         className="flex flex-col h-full w-[1280px] justify-center items-center m-auto text-center text-white md:w-[100%] lg:w-[100%] xl:w-[1280px]"
+      <motion.section
+         variants={staggerContainer()}
+         initial="hidden"
+         whileInView="show"
+         viewport={{ once: true, amount: 0.25 }}
+         className="flex flex-col h-full justify-center items-center m-auto text-center text-white md:w-[100%] lg:w-[100%]"
       >
-         <motion.div variants={textVariant()}>
-            <h1 className="text-4xl font-semibold text-white "> Experiencias e Habilidades </h1>
-         </motion.div>
          <div className="flex flex-col items-center gap-5 m-auto lg:m-0 mt-8 md:justify-evenly md:mt-14  lg:flex lg:justify-evenly lg:mt-10">
             <div className="flex flex-col items-center w-full">
-               <h1 className="text-3xl mt-3 font-semibold md:mt-10">Experiencias</h1>
+               <h1 className="text-4xl font-semibold text-white "> Experiences and Skills </h1>
 
-               {isClient ? (
+               {isClient && (
                   <VerticalTimeline>
-                     {experiences.map((experience) => (
-                        <ExperienceCard experience={experience} key={experience.title} />
+                     {experiences?.map((experience) => (
+                        <ExperienceCard experience={experience} key={experience?.title} />
                      ))}
                   </VerticalTimeline>
-               ) : (
-                  <div className="w-full py-10">Loading experience timeline...</div>
                )}
             </div>
 
-            <div className="w-full mt-10 md:mt-10">
-               <h2 className="text-3xl  font-semibold ">Habilidades</h2>
-               <ul className="flex flex-row flex-wrap justify-center text-center gap-5 space-y-4 md:m-auto">
-                  {technologies.map((technology) => (
-                     <li className="w-24 h-24" key={technology.name}>
-                        {isClient && <BallCanvas icon={technology.icon} />}
-                     </li>
-                  ))}
-               </ul>
+            <div className="flex flex-row justify-between w-full mt-10 md:mt-20">
+               <div className="w-full ">
+                  <h2 className="text-3xl font-semibold ">Skills</h2>
+                  <ul className="flex flex-row flex-wrap justify-center text-center gap-5 md:m-auto">
+                     {technologies?.map((technology) => (
+                        <motion.div
+                           key={technology?.name}
+                           variants={fadeIn("", "", 0.1, 1)}
+                           layout
+                           transition={{ duration: 0.5 }}
+                           className="w-20 h-w-20 overflow-visible group relative flex items-center justify-center"
+                        >
+                           {technology?.icon && <BallCanvas icon={technology.icon} name={technology.name} />}
+                           <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
+                              {technology.name}
+                           </span>
+                        </motion.div>
+                     ))}
+                  </ul>
+               </div>
+
+               <div className="w-full ">
+                  <h2 className="text-3xl font-semibold "> Tolls </h2>
+                  <ul className="flex flex-row flex-wrap justify-center text-center gap-5 md:m-auto">
+                     {tolls?.map((toll) => (
+                        <motion.div
+                           key={toll?.name}
+                           variants={fadeIn("", "", 0.1, 1)}
+                           layout
+                           transition={{ duration: 0.5 }}
+                           className="w-20 h-20 overflow-visible group relative flex items-center justify-center"
+                        >
+                           {toll?.icon && <BallCanvas icon={toll.icon} name={toll.name} />}
+                           <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
+                              {toll.name}
+                           </span>
+                        </motion.div>
+                     ))}
+                  </ul>
+               </div>
             </div>
          </div>
-      </div>
+      </motion.section>
    );
-}
+};
 
 export default SectionWrapper(Experience, "experience");
 // export default Experience;

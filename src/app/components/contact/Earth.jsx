@@ -1,8 +1,9 @@
 import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+// import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import CanvasWrapper from "@/components/CanvasWrapper";
 
 const Earth = () => {
    const earth = useGLTF("./planet/scene.gltf");
@@ -12,7 +13,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
    return (
-      <Canvas
+      <CanvasWrapper
          shadows
          frameloop="demand"
          dpr={[1, 2]}
@@ -26,11 +27,13 @@ const EarthCanvas = () => {
       >
          <Suspense fallback={<CanvasLoader />}>
             <OrbitControls autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+            {/* <ambientLight intensity={0.25} />
+            <directionalLight position={[0, 0, 5]} angle={1} intensity={1} castShadow={true} shadow-mapSize={1024} /> */}
             <Earth />
 
             <Preload all />
          </Suspense>
-      </Canvas>
+      </CanvasWrapper>
    );
 };
 
