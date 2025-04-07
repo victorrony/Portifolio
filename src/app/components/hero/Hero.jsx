@@ -40,7 +40,7 @@ export default function Hero() {
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
          >
-            {/* <ComputersCanvas /> */}
+            <ComputersCanvas />
          </motion.div>
       </header>
    );
