@@ -2,52 +2,54 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { fadeIn, textVariant } from "../../utils/motion";
-import { services, socialLinks } from "@/app/constants";
+import { fadeIn, textVariant, staggerContainer } from "../../utils/motion";
+import { services, socialLinks } from "../../constants/index";
 import { AboutCard } from "./AboutCard";
 import { SectionWrapper } from "@/app/hoc";
 
 const About = () => {
    return (
-      <div className="flex flex-col w-full h-full items-start justify-center text-white lg:w-[100%] xl:w-[1280px] ">
-         <div className=" flex flex-col justify-items-start ">
-            <motion.div variants={textVariant()}>
-               <h1 className="text-4xl font-semibold text-white "> About Me </h1>
-            </motion.div>
-            <motion.div
-               variants={fadeIn("", "", 0.1, 1)}
-               className="mt-4 text-secondary text-[17px] items-left max-w-3xl leading-[30px]"
-            >
-               <p>
-                  Hello, I am{" "}
-                  <span className="font-semibold text-white-100 text-[19px]  ">Victor Rony Pereira Fernandes,</span> a{" "}
-                  <span className="font-semibold text-white-100 text-[19px] ">Full Stack</span> developer specialized in
-                  JavaScript, React, Next.js, Node.js, and SQL databases. With experience in developing scalable and
-                  high-performance web applications, I am always looking to improve my skills and learn new technologies.
-                  I am passionate about technology. My first contact with programming was at the beginning of 2022, when a
-                  friend introduced me to web development.
-               </p>
-            </motion.div>
-
-            <motion.div className="flex w-70 my-6">
-               <ul className=" space-x-16 flex ">
-                  {socialLinks.map((link, index) => (
-                     <li key={index}>
-                        <a href={link.href} target="blank">
-                           {link.icon}
-                        </a>
-                     </li>
-                  ))}
-               </ul>
-            </motion.div>
-         </div>
-
-         <div className="flex gap-10 mb-4 lg:mb-10 xl:mt-16">
-            {services.map((service, index) => (
-               <AboutCard key={service.title} index={index} {...service} />
+      <motion.section
+         className="flex flex-col w-full h-full items-start justify-center text-white lg:w-[100%] xl:w-[1280px]"
+         variants={staggerContainer()}
+         initial="hidden"
+         whileInView="show"
+         viewport={{ once: true, amount: 0.25 }}
+         transition={{ staggerChildren: 0.1 }}
+      >
+         <motion.h1 variants={textVariant()} className="text-7xl font-semibold">
+            About Me
+         </motion.h1>
+         <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-4 text-justify text-[19px] text-wrap leading-[30px]"
+         >
+            <span className="font-semibold text-white-100 text-[19px]">Hi,</span> I am{" "}
+            <span className="font-semibold text-white-100 text-[19px]">Victor Rony Fernandes</span>, a{" "}
+            <span className="font-semibold text-white-100 text-[19px]">Full Stack</span> developer specialized in
+            JavaScript, React, Next.js, Node.js, and SQL databases. With experience in developing scalable and
+            high-performance web applications, I am always looking to improve my skills and learn new
+            technologies. I am passionate about technology. My first contact with programming was at the beginning
+            of 2022, when a friend introduced me to web development.
+         </motion.p>
+         <ul className="space-x-16 flex flex-row z-10 cursor-pointer mt-3">
+            {socialLinks.map((link, index) => (
+               <motion.li key={index} variants={fadeIn("", "", 0.1, 1)}>
+                  <a href={link.href} target="blank">
+                     {link.icon}
+                  </a>
+               </motion.li>
             ))}
-         </div>
-      </div>
+         </ul>
+         <motion.div
+            className="mt-20 w-full flex flex-row flex-wrap gap-7"
+            variants={staggerContainer(0.1, 0.25)}
+         >
+            {/* {services.map((service, index) => (
+               <AboutCard key={service.title} index={index} {...service} />
+            ))} */}
+         </motion.div>
+      </motion.section>
    );
 };
 

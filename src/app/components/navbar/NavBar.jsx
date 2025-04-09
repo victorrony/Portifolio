@@ -1,5 +1,5 @@
 "use client";
-import { navLinks } from "@/app/constants";
+import { navLinks } from "../../constants/index";
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -36,7 +36,7 @@ const NavBar = () => {
                      {isMenuOpen ? <FiX className="text-white w-6 h-6" /> : <FiMenu className="text-white w-6 h-6" />}
                   </button>
                   <div className="hidden md:flex items-center space-x-2">
-                     {navLinks.map((link) => (
+                     {navLinks?.map((link) => (
                         <a
                            key={link.href}
                            href={link.href}
@@ -50,7 +50,7 @@ const NavBar = () => {
             </div>
             {isMenuOpen && (
                <div className="md:hidden flex flex-col items-center space-y-4 py-4">
-                  {navLinks.map((link) => (
+                  {navLinks?.map((link) => (
                      <a
                         key={link.href}
                         href={link.href}

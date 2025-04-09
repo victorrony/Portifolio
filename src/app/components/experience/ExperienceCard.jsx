@@ -4,6 +4,8 @@ import "react-vertical-timeline-component/style.min.css";
 // import { SectionWrapper } from "../hoc";
 
 const ExperienceCard = ({ experience }) => {
+   const title = experience?.title ? experience.title.trim() : "";
+
    return (
       <VerticalTimelineElement
          contentStyle={{
@@ -20,7 +22,7 @@ const ExperienceCard = ({ experience }) => {
          }
       >
          <div>
-            <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+            <h3 className="text-white text-[24px] font-bold">{title}</h3>
             <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
                {experience.company_name}
             </p>

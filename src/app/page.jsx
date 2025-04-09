@@ -18,10 +18,9 @@ export default function Home() {
          <About />
          <Experience />
          <Project />
-         <div className="relative z-0">
-            <div className="absolute inset-0 gradient-02" />
+         <div className="relative z-0 w-full">
             <Contact />
-            {/* <StarsCanvas /> */}
+            <StarsCanvas />
          </div>
       </div>
    );

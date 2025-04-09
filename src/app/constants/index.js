@@ -292,7 +292,7 @@ const socialLinks = [
       icon: <IoLogoGithub className="w-6 h-6 hover:text-white" />,
    },
    {
-      href: "https://",
+      href: "  https://wa.me/+2319519228",
       icon: <IoLogoWhatsapp className="w-6 h-6 hover:text-white" />,
    },
 ];
