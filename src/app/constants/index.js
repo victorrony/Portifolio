@@ -78,7 +78,6 @@ const technologies = [
       name: "Three JS",
       icon: "/assets/tech/Threejs.png",
    },
-
    {
       name: "Motion",
       icon: "/assets/tech/motion.png",
@@ -282,6 +281,7 @@ const projects = [
       source_code_link_vercel: "https://clone-chat-gpt-rho.vercel.app/",
    },
 ];
+
 const socialLinks = [
    {
       href: "https://www.linkedin.com/in/victorfernandes-a41030262/",

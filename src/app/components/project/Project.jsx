@@ -9,7 +9,9 @@ import { projects } from "../../constants";
 const Project = () => {
    return (
       <motion.div initial="hidden" whileInView="show" viewport={{ once: true }}>
-         <motion.h1 variants={textVariant()} className="text-7xl font-semibold text-white">Projetos</motion.h1>
+         <motion.h1 variants={textVariant()} className="text-6xl font-semibold text-white">
+            Projetos
+         </motion.h1>
          <motion.p variants={fadeIn()} className="mt-5 text-white-100 text-[19px] max-w-3xl leading-[30px]">
             Below is a selection of projects that showcase my skills and experience. Each project highlights my ability
             to solve problems and deliver high-quality solutions.

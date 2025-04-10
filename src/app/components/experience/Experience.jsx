@@ -1,6 +1,3 @@
-"use client";
-
-import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
@@ -20,22 +17,18 @@ const Experience = () => {
    return (
       <motion.section
          className="flex flex-col h-full justify-center items-center m-auto text-center text-white md:w-[100%] lg:w-[100%]"
-         variants={staggerContainer()}
          initial="hidden"
          whileInView="show"
-         viewport={{ once: true, amount: 0.25 }}
-         transition={{ staggerChildren: 0.1 }}
-         id="experience"
-         // style={{ scrollBehavior: "smooth" }}
+         viewport={{ once: true }}
       >
          <motion.div className="flex flex-col items-center gap-5 m-auto lg:m-0 mt-8 md:justify-evenly md:mt-14 lg:flex lg:justify-evenly lg:mt-10">
             <motion.div className="flex flex-col items-center w-full">
-               <motion.h1 variants={textVariant()} className="text-7xl font-semibold text-white mb-6">
+               <motion.h1 variants={textVariant()} className="text-6xl font-semibold text-white mb-6">
                   Experiences and Skills
                </motion.h1>
                <VerticalTimeline>
-                  {experiencesList?.map((experience) => (
-                     <ExperienceCard experience={experience} key={experience?.title} />
+                  {experiencesList?.map((experience, index) => (
+                     <ExperienceCard experience={experience} key={`experience-${index}`} />
                   ))}
                </VerticalTimeline>
             </motion.div>
@@ -52,12 +45,16 @@ const Experience = () => {
                         {section.items?.map((item) => (
                            <motion.div
                               key={item?.name}
-                              variants={fadeIn("", "", 0.1, 1)}
-                              layout
-                              transition={{ duration: 0.5 }}
+                              // variants={fadeIn("", "", 0.1, 1)}
+                              // layout
+                              // transition={{ duration: 0.5 }}
                               className="w-20 h-20 overflow-visible group relative flex items-center justify-center"
                            >
-                              {item?.icon && <BallCanvas icon={item.icon} name={item.name} />}
+                              {item?.icon ? (
+                                 <BallCanvas icon={item?.icon} name={item.name} />
+                              ) : (
+                                 <span className="text-xs text-white">{item.name}</span>
+                              )}
                               <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
                                  {item.name}
                               </span>
