@@ -2,24 +2,22 @@ FROM node:20.18.1-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+# Copie os arquivos de dependências do npm
+COPY package.json package-lock.json ./
 
-RUN yarn install --frozen-lockfile
+# Instala as dependências
+RUN npm ci --production
 
-RUN yarn cache clean
-
+# Copia o restante do código
 COPY . .
 
 ENV NODE_ENV production
 ARG ENV
 RUN echo -e "\n${ENV}" >> .env
 
-RUN yarn build
-
-# RUN yarn lint || true
-
-RUN yarn install --production --ignore-scripts --prefer-offline
+# Gera o build
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
