@@ -1,8 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 import { socialLinks } from "../../constants/index";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/app/utils/motion";
 
 const ComputersCanvas = dynamic(() => import("./Computers"), { ssr: false });
 

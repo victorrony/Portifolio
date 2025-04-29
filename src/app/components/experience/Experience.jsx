@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { technologies, experiences, tolls } from "../../constants/index";
 import ExperienceCard from "./ExperienceCard";
-import { fadeIn, staggerContainer, textVariant } from "@/app/utils/motion";
+import { fadeIn, textVariant } from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
-import BallCanvas from "./Ball";
+import BallCanvas from "./BallCanvas";
+// import Gestures from "./Gestures";
 
 const Experience = () => {
    const [experiencesList, setExperiencesList] = useState([]);
@@ -45,14 +46,15 @@ const Experience = () => {
                         {section.items?.map((item) => (
                            <motion.div
                               key={item?.name}
-                              // variants={fadeIn("", "", 0.1, 1)}
-                              // layout
-                              // transition={{ duration: 0.5 }}
+                              variants={fadeIn("", "", 0.1, 1)}
+                              layout
+                              transition={{ duration: 0.5 }}
                               className="w-20 h-20 overflow-visible group relative flex items-center justify-center"
                            >
                               {item?.icon ? (
                                  <BallCanvas icon={item?.icon} name={item.name} />
                               ) : (
+                                 // <Gestures icon={item?.icon} />
                                  <span className="text-xs text-white">{item.name}</span>
                               )}
                               <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">

@@ -20,8 +20,9 @@ export default function Home() {
          <Project />
          <div className="relative z-0 w-full">
             <Contact />
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
          </div>
+         <StarsCanvas />
       </div>
    );
 }

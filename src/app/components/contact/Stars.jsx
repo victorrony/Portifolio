@@ -36,3 +36,4 @@ const StarsCanvas = () => {
 };
 
 export default StarsCanvas;
+
