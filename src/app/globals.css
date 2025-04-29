@@ -18,13 +18,9 @@
 }
 
 .black-gradient {
-   background: #000000; 
-   background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(
-      to right,
-      #434343,
-      #000000
-   ); 
+   background: #000000; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #434343, #000000);
+   background: linear-gradient(to right, #434343, #000000);
 }
 
 .violet-gradient {
@@ -49,12 +45,13 @@
    ); 
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
-}
+}  
 
+/* Retain only one green-text-gradient definition */
 .green-text-gradient {
-   background: #11998e; 
-   background: -webkit-linear-gradient(to top, #11998e, #38ef7d);  
-   background: linear-gradient(to top, #11998e, #38ef7d); 
+   background: #11998e; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
+   background: linear-gradient(to top, #11998e, #38ef7d);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
