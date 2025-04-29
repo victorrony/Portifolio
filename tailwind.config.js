@@ -1,7 +1,8 @@
-
 module.exports = {
-   content: ["./src/**/*.{js,jsx}"],
-
+   content: [
+      "./src/**/*.{js,jsx,ts,tsx}",
+      "./pages/**/*.{js,jsx,ts,tsx}" // added Next.js pages directory
+   ],
    theme: {
       extend: {
          colors: {
