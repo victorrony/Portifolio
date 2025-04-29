@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+"use client";import React, { useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { getSharedRenderer } from "../app/utils/renderer";
 

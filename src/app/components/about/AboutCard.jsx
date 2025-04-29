@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../../utils/motion";
+import Image from "next/image";
 
 export const AboutCard = ({ index, title, icon }) => (
    <Tilt className="xs:w-[250px] w-full">
@@ -17,7 +20,7 @@ export const AboutCard = ({ index, title, icon }) => (
             }}
             className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
          >
-            <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
+            <Image src={icon} alt="web-development" width={50} height={50} className="object-contain" />
 
             <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
          </div>

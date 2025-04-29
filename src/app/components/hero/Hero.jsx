@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="w-[3px] h-48 bg-white left-12 abso transform -translate-x-1/2"></div>
             <div className="flex flex-col items-center gap-7">
                <h2 className="text-2xl font-sans lg:text-3xl text-white">
-                  Hi, my name is <span className="font-bold font-serif text-3xl text-blue-700">Victor Rony.</span> I'm
+                  Hi, my name is <span className="font-bold font-serif text-3xl text-blue-700">Victor Rony.</span> I&apos;m
                </h2>
                <h1 className="text-4xl mt-4 lg:mt-6 text-white">
                   <span className="font-bold">Full Stack Developer </span>

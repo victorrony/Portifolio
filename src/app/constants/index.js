@@ -1,3 +1,5 @@
+"use client";
+
 // Desc: This file contains all the constants used in the application.
 
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
