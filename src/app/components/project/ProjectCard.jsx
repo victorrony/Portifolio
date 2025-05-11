@@ -22,13 +22,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] shadow-card"
          >
             <div className="relative w-full h-[230px]">
-               <Image src={image} alt="project_image" fill className="object-cover rounded-2xl" />
+               <Image src={image} alt="project_image" layout="fill" objectFit="cover" className="object-cover rounded-2xl" />
                <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
                   <button
                      onClick={() => window.open(source_code_link, "_blank")}
                      className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
                   >
-                     <Image src="/assets/github.png" alt="source code" className="object-contain" />
+                     <Image src="/assets/github.png" width={40} height={40} alt="source code" className="object-contain" />
                   </button>
                </div>
             </div>
@@ -42,7 +42,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
                      key={`${name}-${icon}`}
                      className={`group relative cursor-pointer flex items-center justify-center gap-0.5 backdrop-blur rounded-xl size-9 lg:size-12 p-2 bg-zinc-800/80 max-lg:hidden`}
                   >
-                     {icon && <Image src={icon} alt={name} className="w-full h-full" />}
+                     {icon && <Image src={icon} alt={name} width={100} height={100} className="w-full h-full" />}
                      <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
                         {name}
                      </span>

@@ -23,6 +23,8 @@ const ExperienceCard = ({ experience }) => {
       <VerticalTimelineElement
          contentStyle={{ background: "#1d1836", color: "#fff" }}
          contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+         dateClassName="text-white-100 display: flex text-[16px] font-semibold"
+         dateStyle={{ color: "black", fontSize: "16px", display: "flex" }}
          date={date}
          iconStyle={{ background: iconBg }}
          icon={
@@ -40,9 +42,12 @@ const ExperienceCard = ({ experience }) => {
 
          <ul className="mt-5 list-disc ml-5 space-y-2">
             {points.map((point, index) => (
-               <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
-                  {point}
-               </li>
+               // Check if point is a string before rendering
+               typeof point === "string" && (
+                  <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
+                     {point}
+                  </li>
+               )
             ))}
          </ul>
       </VerticalTimelineElement>

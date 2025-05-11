@@ -13,15 +13,9 @@ export const AboutCard = ({ index, title, icon }) => (
          className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
          <div
-            options={{
-               max: 45,
-               scale: 1,
-               speed: 450,
-            }}
-            className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+            className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex flex-col justify-evenly items-center"
          >
-            <Image src={icon} alt="web-development" width={50} height={50} className="object-contain" />
-
+            <Image src={icon} alt={title} width={50} height={50} className="object-contain" />
             <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
          </div>
       </motion.div>
