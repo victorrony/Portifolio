@@ -1,19 +1,23 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../../styles";
 import { slideIn } from "../../utils/motion";
 import { SectionWrapper } from "@/app/hoc";
 import EarthCanvas from "./Earth";
+// import Modal from "./Modal";
 
 const Contact = () => {
    const [form, setForm] = useState({ name: "", email: "", message: "" });
    const [loading, setLoading] = useState(false);
 
+   const [modalOpen, setModalOpen] = useState(false);
+   const [modalSuccess, setModalSuccess] = useState(false);
+
    const handleChange = (e) => {
-      setForm((prevForm) => ({ ...prevForm, [e.target.name]: e.target.value }));
+      const { name, value } = e.target;
+      setForm((prevForm) => ({ ...prevForm, [name]: value }));
    };
 
    const handleSubmit = async (e) => {
@@ -21,25 +25,29 @@ const Contact = () => {
       setLoading(true);
 
       try {
-         await emailjs.send(
-            import.meta.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-            import.meta.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-            {
-               from_name: form.name,
-               to_name: "Victor Rony Fernandes",
-               from_email: form.email,
-               to_email: "victorronyfernandes@gmail.com",
+         const res = await fetch("/api/email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+               name: form.name,
+               to_name: "Victor",
+               email: form.email,
                message: form.message,
-            },
-            import.meta.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-         );
-         alert("Thank you. I will get back to you as soon as possible.");
-         setForm({ name: "", email: "", message: "" });
+            }),
+         });
+
+         if (res.ok) {
+            setModalSuccess(true);
+            setForm({ name: "", email: "", message: "" });
+            setModalOpen(true);
+         } else {
+            alert("Failed to send message. Please try again.");
+         }
       } catch (error) {
-         console.error(error);
-         alert("Ahh, something went wrong. Please try again.");
+         console.error("Error sending email:", error);
       } finally {
          setLoading(false);
+         setTimeout(() => window.location.reload(), 1000);
       }
    };
 
@@ -53,8 +61,8 @@ const Contact = () => {
             <h3 className={styles.sectionSubText}> Send me a message </h3>
 
             <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-8">
-               {["name", "email", "message"].map((field, index) => (
-                  <label key={index} className="flex flex-col">
+               {["name", "email", "message"].map((field) => (
+                  <label key={field} className="flex flex-col">
                      <span className="text-white font-medium mb-4">
                         Your {field.charAt(0).toUpperCase() + field.slice(1)}
                      </span>
@@ -76,6 +84,14 @@ const Contact = () => {
                   {loading ? "Sending..." : "Send"}
                </button>
             </form>
+
+            {/* <Modal
+               isOpen={modalOpen}
+               onClose={() => setModalOpen(false)}
+               isSuccess={modalSuccess}
+               submittedEmail={form.email}
+               message="Thank you for your message. I will get back to you as soon as possible."
+            /> */}
          </motion.div>
 
          <motion.div
@@ -88,5 +104,4 @@ const Contact = () => {
    );
 };
 
-// export default Contact;
 export default SectionWrapper(Contact, "contact");
