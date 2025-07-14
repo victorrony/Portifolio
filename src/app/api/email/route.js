@@ -21,7 +21,7 @@ export async function POST(req) {
 
       const mailData = {
          from: "no.reply.registry.01@gmail.com",
-         to: "victor.fernandes@sintaxy.com",
+         to: "victorrony89@gmail.com",
          subject: `Contact Form Portfolio from ${name}`,
          text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       };

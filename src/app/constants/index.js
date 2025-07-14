@@ -41,16 +41,16 @@ const services = [
 
 const technologies = [
    {
+      name: "JavaScript",
+      icon: "/assets/tech/javascript.png",
+   },
+   {
       name: "HTML 5",
-      icon: "/assets/tech/html.png",
+      icon: "/assets/tech/html5.png",
    },
    {
       name: "CSS 3",
-      icon: "/assets/tech/css.png",
-   },
-   {
-      name: "JavaScript",
-      icon: "/assets/tech/javascript.png",
+      icon: "/assets/tech/css3.png",
    },
    {
       name: "TypeScript",
@@ -281,6 +281,40 @@ const projects = [
       image: "/assets/ChatGPT_clone.png",
       source_code_link: "https://github.com/victorrony/Clone-chatGPT",
       source_code_link_vercel: "https://clone-chat-gpt-rho.vercel.app/",
+   },
+   {
+      name: "Listagem de Pessoas e",
+      description: "A web application that enables users to create and view a list of people and cities.",
+      tags: [
+         {
+            name: "React",
+            icon: "/assets/tech/reactjs.png",
+            descricao: "Biblioteca para criar interfaces de usuário",
+         },
+         {
+            name: "Material-UI",
+            icon: "/assets/tech/material-ui.png",
+            descricao: "Biblioteca para criar interfaces de usuário",
+         },
+         {
+            name: "TypeScript",
+            icon: "/assets/tech/typescript.png",
+            descricao: "Linguagem de programação para criar aplicações web escaláveis",
+         },
+         {
+            name: "Node.js",
+            icon: "/assets/tech/nodejs.png",
+            descricao: "Ambiente de execução para aplicações web",
+         },
+         {
+            name: "SQLite",
+            icon: "/assets/tech/sqlite.jpeg",
+            descricao: "Sistema de gerenciamento de bancos de dados",
+         },
+      ],
+      image: "/assets/Listagem-de-Pessoas-e-Cidades.png",
+      source_code_link: "https://github.com/victorrony/Listagem-de-Pessoas-e-Cidades-FrontEnd",
+      source_code_link_vercel: "https://listagem-de-pessoas-e-cidades-front.vercel.app",
    },
 ];
 

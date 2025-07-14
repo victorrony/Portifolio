@@ -22,13 +22,25 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] shadow-card"
          >
             <div className="relative w-full h-[230px]">
-               <Image src={image} alt="project_image" layout="fill" objectFit="cover" className="object-cover rounded-2xl" />
+               <Image
+                  src={image}
+                  alt="project_image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="object-cover rounded-2xl"
+               />
                <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
                   <button
                      onClick={() => window.open(source_code_link, "_blank")}
                      className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
                   >
-                     <Image src="/assets/github.png" width={40} height={40} alt="source code" className="object-contain" />
+                     <Image
+                        src="/assets/github.png"
+                        width={40}
+                        height={40}
+                        alt="source code"
+                        className="object-contain"
+                     />
                   </button>
                </div>
             </div>
