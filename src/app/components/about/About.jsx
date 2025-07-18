@@ -29,7 +29,7 @@ const About = () => {
             aprendizado.
          </motion.p>
 
-         <div className="mt-20 w-full flex flex-wrap gap-7">
+         <div className="flex flex-wrap gap-10 mt-10">
             {services?.map((service, index) => (
                <AboutCard key={`service-${index}`} index={index} {...service} />
             ))}
