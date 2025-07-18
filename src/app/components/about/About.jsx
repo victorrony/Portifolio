@@ -11,14 +11,13 @@ const About = () => {
    return (
       <motion.section
          suppressHydrationWarning
-         className="flex flex-col w-full h-full items-start justify-center text-white lg:w-[100%] xl:w-[1280px]"
-         variants={staggerContainer()}
          initial="hidden"
          whileInView="show"
-         viewport={{ once: true, amount: 0.25 }}
-         transition={{ staggerChildren: 0.1 }}
+         viewport={{ once: false, amount: 0.5 }} // ajuste here
+         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }} // ajuste here
+         exit="hidden" // nova prop
       >
-         <motion.h1 variants={textVariant(0.1)} className="text-6xl font-semibold text-white">
+         <motion.h1 variants={textVariant()} className="text-6xl font-semibold text-white">
             About Me
          </motion.h1>
          <motion.p

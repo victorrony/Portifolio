@@ -52,7 +52,15 @@ const Contact = () => {
    };
 
    return (
-      <div className="xl:mt-12 flex gap-10 overflow-hidden">
+      <motion.section
+         suppressHydrationWarning
+         initial="hidden"
+         whileInView="show"
+         viewport={{ once: false, amount: 0.5 }} // ajuste here
+         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }} // ajuste here
+         exit="hidden" // nova prop
+         className="xl:mt-12 flex gap-10 overflow-hidden"
+      >
          <motion.div
             variants={slideIn("left", "tween", 0.5, 1)}
             className="flex-[0.75] bg-black-100 p-8 w-full rounded-2xl"
@@ -100,7 +108,7 @@ const Contact = () => {
          >
             <EarthCanvas />
          </motion.div>
-      </div>
+      </motion.section>
    );
 };
 
