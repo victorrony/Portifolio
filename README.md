@@ -1,38 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portifolio - Victor Fernandes
 
-## Getting Started
+## 📑 Sumário
 
-First, run the development server:
+-  [Sobre Mim](#sobre-mim)
+-  [Instalação](#-instalação)
+-  [Uso](#-uso)
+-  [Scripts úteis](#-scripts-úteis)
+-  [Tecnologias Utilizadas](#tecnologias-utilizadas)
+-  [Features](#-features)
+-  [Prints](#-prints)
+-  [Deploy](#-deploy)
+-  [Contato](#contato)
+-  [Licença](#-licença)
+
+## 👤 Sobre Mim
+
+Desenvolvedor Full Stack apaixonado por tecnologia, com experiência em React, Next.js, Node.js e design responsivo.
+Sempre buscando novos desafios e aprendizados!
+
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+Portfólio profissional desenvolvido em Next.js, React e Tailwind CSS, apresentando projetos, experiências e habilidades.
+
+## 🚀 Instalação
+
+```bash
+git clone https://github.com/victorrony/portifolio.git
+cd portifolio
+npm install
+```
+
+## 🖥️ Uso
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Scripts úteis
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+-  `npm run dev` — inicia o ambiente de desenvolvimento
+-  `npm run build` — build de produção
+-  `npm run start` — inicia o servidor de produção
+-  `npm run lint` — executa o linter
+-  `npm run format` — formata o código com Prettier
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+  <img src="public/assets/tech/reactjs.png" alt="React" width="32" />
+  <img src="public/assets/tech/nextjs.jpeg" alt="Next.js" width="32" />
+  <img src="public/assets/tech/tailwind.png" alt="Tailwind CSS" width="32" />
+  <img src="public/assets/tech/nodejs.png" alt="Node.js" width="32" />
+  <img src="public/assets/tech/typescript.png" alt="TypeScript" width="32" />
+  <img src="public/assets/tech/mysql.png" alt="MySQL" width="32" />
+  <img src="public/assets/tech/git.png" alt="Git" width="32" />
+  <img src="public/assets/tech/figma.png" alt="Figma" width="32" />
+</div>
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+-  Listagem de projetos
+-  Linha do tempo de experiências
+-  Skills e ferramentas
+-  Responsivo e acessível
+-  Deploy automático via Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Prints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Home](public/ShoesShop.png) ![Projetos](public/Rest_countries.png)
 
-## Deploy on Vercel
+## 📦 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy automático via [Vercel](https://vercel.com/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contato
+
+-  [LinkedIn](https://www.linkedin.com/in/victorfernandes-a41030262/)
+-  [GitHub](https://github.com/victorrony)
+-  [WhatsApp](https://wa.me/+2319519228)
+
+## 📄 Licença
+
+MIT

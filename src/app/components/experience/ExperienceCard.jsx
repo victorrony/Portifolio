@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
             padding: "1.5rem",
             borderRadius: "1rem",
             minWidth: 0, // Evita overflow em telas pequenas
-            maxWidth: "60%", // Garante que o conteúdo não exceda a largura do elemento pai
+            maxWidth: "6 0%", // Garante que o conteúdo não exceda a largura do elemento pai
          }}
          contentArrowStyle={{ borderRight: "7px solid  #232631" }}
          dateClassName="text-white-100 flex text-[16px] font-semibold"

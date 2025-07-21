@@ -17,7 +17,7 @@ const About = () => {
          transition={{ staggerChildren: 0.2, delayChildren: 0.2 }} // ajuste here
          exit="hidden" // nova prop
       >
-         <motion.h1 variants={textVariant()} className="text-6xl font-semibold text-white">
+         <motion.h1 variants={textVariant()} className="text-4xl md:text-6xl font-semibold text-white">
             About Me
          </motion.h1>
          <motion.p

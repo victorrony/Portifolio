@@ -2,6 +2,8 @@
 
 // Desc: This file contains all the constants used in the application.
 
+// Navegação principal do site
+
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 const navLinks = [
@@ -12,6 +14,7 @@ const navLinks = [
    { href: "#contact", label: "Contact" },
 ];
 
+// Serviços oferecidos
 const services = [
    {
       title: "Web Developer",
@@ -39,6 +42,7 @@ const services = [
    // },
 ];
 
+// Tecnologias principais
 const technologies = [
    {
       name: "JavaScript",
@@ -86,7 +90,8 @@ const technologies = [
    },
 ];
 
-const tolls = [
+// Ferramentas utilizadas
+const tools = [
    {
       name: "VS Code",
       icon: "/assets/tech/vscode.jpeg",
@@ -113,6 +118,7 @@ const tolls = [
    },
 ];
 
+// Experiências profissionais
 const experiences = [
    {
       title: "React.js Developer",
@@ -168,6 +174,7 @@ const experiences = [
    },
 ];
 
+// Projetos em destaque
 const projects = [
    {
       name: "Shoes E-commerce",
@@ -318,6 +325,7 @@ const projects = [
    },
 ];
 
+// Links sociais
 const socialLinks = [
    {
       href: "https://www.linkedin.com/in/victorfernandes-a41030262/",
@@ -333,4 +341,4 @@ const socialLinks = [
    },
 ];
 
-export { services, technologies, experiences, projects, socialLinks, navLinks, tolls };
+export { services, technologies, experiences, projects, socialLinks, navLinks, tools };
