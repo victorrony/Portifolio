@@ -94,7 +94,7 @@ export default function Hero() {
                   I&apos;m
                </h2>
                <h1 ref={titleRef} className="text-5xl mt-4 lg:mt-6 text-white">
-                  <span className="font-bold">Full Stack Developer</span>
+                  <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Full Stack Developer</span>
                </h1>
 
                <ul

@@ -8,10 +8,10 @@ import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 const navLinks = [
    // { href: "/", label: "Home" },
-   { href: "#about", label: "About me" },
-   { href: "#experience", label: "Experience" },
-   { href: "#projects", label: "Projects" },
-   { href: "#contact", label: "Contact" },
+   { href: "#about", label: "About", icon: "/assets/user.png" },
+   { href: "#experience", label: "Experience", icon: "/assets/layers.svg" },
+   { href: "#projects", label: "Projects", icon: "/assets/folder front.png" },
+   { href: "#contact", label: "Contact", icon: "/assets/send.svg" },
 ];
 
 // Serviços oferecidos
