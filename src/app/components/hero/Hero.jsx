@@ -17,27 +17,8 @@ export default function Hero() {
    useEffect(() => {
       const tl = gsap.timeline({ delay: 0.3 });
 
-      // Animação do subtítulo
-      tl.from(subtitleRef.current, {
-         duration: 1,
-         y: 50,
-         opacity: 0,
-         ease: "power3.out",
-      });
+      tl.from(subtitleRef.current, { duration: 1, y: 50, opacity: 0, ease: "power2.out" }, "-=0.5");
 
-      // Animação do nome com efeito typewriter
-      tl.from(
-         nameRef.current,
-         {
-            duration: 0.8,
-            x: -30,
-            opacity: 0,
-            ease: "power2.out",
-         },
-         "-=0.5"
-      );
-
-      // Animação do título principal
       const animateTitle = () => {
          if (titleRef.current) {
             const splitTitle = new SplitText(titleRef.current, { type: "chars" });
@@ -50,8 +31,6 @@ export default function Hero() {
                   rotationX: -90,
                   stagger: 0.05,
                   ease: "back.out(1.7)",
-                  // repeatDelay: 0.1,
-                  // repeat: -1,
                },
                "-=0.2"
             );
@@ -66,7 +45,6 @@ export default function Hero() {
 
       return () => clearInterval(interval);
 
-      // Animação dos social links
       tl.from(
          socialRef.current.children,
          {
@@ -93,8 +71,10 @@ export default function Hero() {
                   </span>{" "}
                   I&apos;m
                </h2>
-               <h1 ref={titleRef} className="text-5xl mt-4 lg:mt-6 text-white">
-                  <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Full Stack Developer</span>
+               <h1 className="text-5xl mt-4 lg:mt-6 text-white">
+                  <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                     Full Stack Developer
+                  </span>
                </h1>
 
                <ul
