@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import { memo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { technologies, experiences, tools } from "../../constants/index";
@@ -9,20 +9,18 @@ import { fadeIn, textVariant } from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
 import BallCanvas from "./BallCanvas";
 
+const MemoBallCanvas = memo(BallCanvas);
+
 const Experience = () => {
    const skillsContainerRef = useRef(null);
    const toolsContainerRef = useRef(null);
    const [technologiesState, setTechnologiesState] = useState([...technologies]);
    const [toolsState, setToolsState] = useState([...tools]);
 
-   // Memoize BallCanvas for performance
-   const MemoBallCanvas = React.memo(BallCanvas);
-
    return (
       <motion.section
          className="relative w-full flex flex-col justify-center items-center mx-auto mt-20"
          id="experience"
-         suppressHydrationWarning
          initial="hidden"
          whileInView="show"
          viewport={{ once: false, amount: 0.5 }}
@@ -106,4 +104,4 @@ const Experience = () => {
    );
 };
 
-export default SectionWrapper(Experience, "experience");
+export default SectionWrapper(memo(Experience), "experience");

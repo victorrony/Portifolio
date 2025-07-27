@@ -44,26 +44,27 @@ const services = [
 
 // Tecnologias principais
 const technologies = [
+   // {
+   //    name: "JavaScript",
+   //    icon: "/assets/tech/javascript.png",
+   // },
+   // {
+   //    name: "HTML 5",
+   //    icon: "/assets/tech/html5.png",
+   // },
+   // {
+   //    name: "CSS 3",
+   //    icon: "/assets/tech/css3.png",
+   // },
    {
-      name: "JavaScript",
-      icon: "/assets/tech/javascript.png",
-   },
-   {
-      name: "HTML 5",
-      icon: "/assets/tech/html5.png",
-   },
-   {
-      name: "CSS 3",
-      icon: "/assets/tech/css3.png",
+      name: "React JS",
+      icon: "/assets/tech/reactjs.png",
    },
    {
       name: "TypeScript",
       icon: "/assets/tech/typescript.png",
    },
-   {
-      name: "React JS",
-      icon: "/assets/tech/reactjs.png",
-   },
+
    {
       name: "Next JS",
       icon: "/assets/tech/nextjs.jpeg",
