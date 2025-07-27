@@ -64,11 +64,10 @@ const technologies = [
       name: "TypeScript",
       icon: "/assets/tech/typescript.png",
    },
-
-   {
-      name: "Next JS",
-      icon: "/assets/tech/nextjs.jpeg",
-   },
+   // {
+   //    name: "Next JS",
+   //    icon: "/assets/tech/nextjs.jpeg",
+   // },
    {
       name: "Tailwind CSS",
       icon: "/assets/tech/tailwind.png",

@@ -4,36 +4,30 @@ import { Canvas } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload, useTexture, Html } from "@react-three/drei";
 
 const Ball = ({ imgUrl, name }) => {
-  // Só tenta carregar se imgUrl for string válida
-  const isValidImg = typeof imgUrl === "string" && imgUrl.trim() !== "";
-  const [decal] = useTexture(isValidImg ? [imgUrl] : [null]);
+   // Só tenta carregar se imgUrl for string válida
+   const isValidImg = typeof imgUrl === "string" && imgUrl.trim() !== "";
+   const [decal] = useTexture(isValidImg ? [imgUrl] : [null]);
 
-  return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial color="#fff8eb" polygonOffset polygonOffsetFactor={-5} flatShading />
-        {decal && (
-          <Decal
-            position={[0, 0, 1]}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            scale={1}
-            map={decal}
-            flatShading
-          />
-        )}
-      </mesh>
-      {!decal && (
-        <Html center>
-          <span style={{ color: "#333", fontSize: 12, background: "#fff8eb", borderRadius: 8, padding: 2 }}>
-            {name}
-          </span>
-        </Html>
-      )}
-    </Float>
-  );
+   return (
+      <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+         <ambientLight intensity={0.25} />
+         <directionalLight position={[0, 0, 0.05]} />
+         <mesh castShadow receiveShadow scale={2.75}>
+            <icosahedronGeometry args={[1, 1]} />
+            <meshStandardMaterial color="#fff8eb" polygonOffset polygonOffsetFactor={-5} flatShading />
+            {decal && (
+               <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} scale={1} map={decal} flatShading />
+            )}
+         </mesh>
+         {!decal && (
+            <Html center>
+               <span style={{ color: "#333", fontSize: 12, background: "#fff8eb", borderRadius: 8, padding: 2 }}>
+                  {name}
+               </span>
+            </Html>
+         )}
+      </Float>
+   );
 };
 
 const BallCanvas = ({ icon, name }) => {

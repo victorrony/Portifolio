@@ -84,7 +84,7 @@ const Experience = () => {
                            aria-describedby={`tooltip-${name}`}
                         >
                            {icon ? (
-                              <MemoBallCanvas icon={icon} name={name} alt={name + " icon"} />
+                              <MemoBallCanvas icon={icon} name={name} index={index} alt={name + " icon"} />
                            ) : (
                               <span className="text-xs text-center text-white px-2">{name}</span>
                            )}
