@@ -16,7 +16,7 @@ const StarWrapper = (Component, idName) =>
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className={`${styles.padding} w-[1280px]  mx-auto relative z-0`}
+            className={`${styles.padding} lg:w-[1280px]  mx-auto relative z-0`}
          >
             <span className="hash-span" id={idName}>
                &nbsp;

@@ -60,7 +60,7 @@ export default function Hero() {
    }, []);
 
    return (
-      <header className="relative w-full h-full flex flex-col items-center justify-center md:w-full lg:w-full xl:w-[1280px]">
+      <header className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden xl:w-[1280px]">
          <div className="absolute inset-0 top-[90px] max-w-7xl mx-auto flex flex-row justify-center w-full gap-10 lg:gap-20 xl:gap-10">
             <div className="w-[3px] h-48 bg-white transform -translate-x-1/2"></div>
             <div className="flex flex-col items-center gap-7">
@@ -97,7 +97,7 @@ export default function Hero() {
             </div>
          </div>
 
-         <ComputersCanvas className="absolute inset-0 w-full h-full" />
+         <ComputersCanvas className="absolute inset-0 w-[20%] h-full" />
       </header>
    );
 }
