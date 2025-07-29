@@ -3,18 +3,15 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Image from "next/image";
-
 // import { SectionWrapper } from "../hoc";
 
-// Utility function to validate geometry positions
 const validateGeometry = (geometry) => {
    if (geometry?.attributes?.position?.array.some((val) => isNaN(val))) {
       console.error("Geometry position attributes contain NaN values.");
    }
 };
 
-// Example usage (replace with actual geometry object)
-const exampleGeometry = {}; // Replace with your geometry object
+const exampleGeometry = {};
 validateGeometry(exampleGeometry);
 
 const ExperienceCard = ({ experience }) => {
@@ -27,8 +24,8 @@ const ExperienceCard = ({ experience }) => {
             color: "#fff",
             padding: "1.5rem",
             borderRadius: "1rem",
-            minWidth: 0, // Evita overflow em telas pequenas
-            maxWidth: "6 0%", // Garante que o conteúdo não exceda a largura do elemento pai
+            minWidth: 0,
+            maxWidth: "6 0%",
          }}
          contentArrowStyle={{ borderRight: "7px solid  #232631" }}
          dateClassName="text-white-100 flex text-[16px] font-semibold"
@@ -36,7 +33,7 @@ const ExperienceCard = ({ experience }) => {
             color: "black",
             fontSize: "16px",
             display: "flex",
-            flexWrap: "wrap", // Permite quebra de linha
+            flexWrap: "wrap",
          }}
          date={date}
          iconStyle={{
