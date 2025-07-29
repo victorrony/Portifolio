@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { slideIn } from "../../utils/motion";
 import { SectionWrapper } from "@/app/hoc";
-import EarthCanvas from "./Earth";
+import DynamicEarthCanvas from "./DynamicEarthCanvas";
 // import Modal from "./Modal";
 
 const Contact = () => {
@@ -106,7 +106,7 @@ const Contact = () => {
             variants={slideIn("right", "tween", 0.5, 1)}
             className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
          >
-            <EarthCanvas />
+            <DynamicEarthCanvas />
          </motion.div>
       </motion.section>
    );

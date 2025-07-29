@@ -20,11 +20,11 @@ const CanvasWrapper = (props) => {
          {...props}
          onCreated={({ gl }) => {
             const sharedRenderer = getSharedRenderer();
-            gl.dispose(); // Dispose of the default renderer
-            Object.assign(gl, sharedRenderer); // Replace with the shared renderer
+            gl.dispose(); 
+            Object.assign(gl, sharedRenderer);
          }}
       />
    );
-};
+}; 
 
 export default CanvasWrapper;

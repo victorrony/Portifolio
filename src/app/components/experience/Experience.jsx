@@ -7,9 +7,8 @@ import { technologies, experiences, tools } from "../../constants/index";
 import ExperienceCard from "./ExperienceCard";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
-import BallCanvas from "./BallCanvas";
-
-const MemoBallCanvas = memo(BallCanvas);
+// import BallCanvas from "./BallCanvas";
+import DynamicBallCanvas from "./DynamicBallCanvas";
 
 const Experience = () => {
    const skillsContainerRef = useRef(null);
@@ -84,7 +83,7 @@ const Experience = () => {
                            aria-describedby={`tooltip-${name}`}
                         >
                            {icon ? (
-                              <MemoBallCanvas icon={icon} name={name} index={index} alt={name + " icon"} />
+                              <DynamicBallCanvas icon={icon} name={name} index={index} alt={name + " icon"} />
                            ) : (
                               <span className="text-xs text-center text-white px-2">{name}</span>
                            )}
