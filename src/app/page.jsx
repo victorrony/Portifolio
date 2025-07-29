@@ -6,13 +6,14 @@ import Project from "./components/project/Project";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
-import StarsCanvas from "./components/contact/Stars";
+import DynamicStars from "./components/contact/DynamicStars";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 export default function Home() {
    return (
-      <ErrorBoundary>
+      // <ErrorBoundary>
          <div className="relative w-full flex flex-col justify-center text-white items-center m-auto z-0 bg-primary bg-[url('/steve-johnson-jDoTMvp8E_o-unsplash.jpg')] bg-cover bg-center bg-no-repeat">
+
             <NavBar />
             
             <main role="main" className="w-full">
@@ -64,9 +65,9 @@ export default function Home() {
 
             {/* Background Stars */}
             <div className="fixed inset-0 z-[-1]" aria-hidden="true">
-               <StarsCanvas />
+            {/* <DynamicStars /> */}
             </div>
          </div>
-      </ErrorBoundary>
+      // </ErrorBoundary>
    );
 }
