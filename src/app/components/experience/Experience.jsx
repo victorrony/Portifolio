@@ -88,6 +88,7 @@ const Experience = () => {
                            ) : (
                               <span className="text-xs text-center text-white px-2">{name}</span>
                            )}
+
                            <span
                               id={`tooltip-${name}`}
                               className="text-xs text-white invisible absolute top-[-40px] px-2 py-1 bg-black/90 rounded-md group-hover:visible transition-all duration-300 whitespace-nowrap z-10"
