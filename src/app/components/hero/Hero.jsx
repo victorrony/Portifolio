@@ -97,7 +97,7 @@ export default function Hero() {
             </div>
          </div>
 
-         <ComputersCanvas className="absolute inset-0 w-[20%] h-full" />
+         {/* <ComputersCanvas className="absolute inset-0 w-[20%] h-full" /> */}
       </header>
    );
 }

@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
-import CanvasWrapper from "@/components/CanvasWrapper";
+// import CanvasWrapper from "@/components/CanvasWrapper";
 
 const Earth = () => {
    const earth = useGLTF("./planet/scene.gltf");
