@@ -64,6 +64,7 @@ export const metadata = {
          "max-snippet": -1,
       },
    },
+   manifest: "/manifest.json",
    verification: {
       google: "your-google-verification-code",
    },

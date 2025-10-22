@@ -1,13 +1,8 @@
 "use client";
 
-// Desc: This file contains all the constants used in the application.
-
-// Navegação principal do site
-
 import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io5";
 
 const navLinks = [
-   // { href: "/", label: "Home" },
    { href: "#about", label: "About", icon: "/assets/user.png" },
    { href: "#experience", label: "Experience", icon: "/assets/layers.svg" },
    { href: "#projects", label: "Projects", icon: "/assets/folder front.png" },
@@ -28,34 +23,14 @@ const services = [
       title: "Backend Developer",
       icon: "/assets/backend.png",
    },
-   // {
-   //    title: "UI/UX Designer",
-   //    icon: "/assets/creator.png",
-   // },
    {
       title: "Full Stack Developer",
       icon: "/assets/web.png",
    },
-   // {
-   //    title: "React Native Developer",
-   //    icon: "/assets/web.png",
-   // },
 ];
 
 // Tecnologias principais
 const technologies = [
-   // {
-   //    name: "JavaScript",
-   //    icon: "/assets/tech/javascript.png",
-   // },
-   // {
-   //    name: "HTML 5",
-   //    icon: "/assets/tech/html5.png",
-   // },
-   // {
-   //    name: "CSS 3",
-   //    icon: "/assets/tech/css3.png",
-   // },
    {
       name: "React JS",
       icon: "/assets/tech/reactjs.png",
@@ -64,10 +39,6 @@ const technologies = [
       name: "TypeScript",
       icon: "/assets/tech/typescript.png",
    },
-   // {
-   //    name: "Next JS",
-   //    icon: "/assets/tech/nextjs.jpeg",
-   // },
    {
       name: "Tailwind CSS",
       icon: "/assets/tech/tailwind.png",
@@ -332,11 +303,11 @@ const socialLinks = [
       icon: <IoLogoLinkedin className="w-6 h-6 hover:text-white" />,
    },
    {
-      href: "  https://github.com/victorrony",
+      href: "https://github.com/victorrony",
       icon: <IoLogoGithub className="w-6 h-6 hover:text-white" />,
    },
    {
-      href: "  https://wa.me/+2319519228",
+      href: "https://wa.me/+2319519228",
       icon: <IoLogoWhatsapp className="w-6 h-6 hover:text-white" />,
    },
 ];

@@ -1,13 +1,26 @@
 "use client";
 import "./globals.css";
-import Experience from "./components/experience/Experience";
+import dynamic from "next/dynamic";
 import NavBar from "./components/navbar/NavBar";
-import Project from "./components/project/Project";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
-import DynamicStars from "./components/contact/DynamicStars";
 import ErrorBoundary from "./components/ErrorBoundary";
+
+// Lazy load de componentes fora do viewport inicial para melhor performance
+const About = dynamic(() => import("./components/about/About"), {
+   loading: () => <div className="h-screen flex items-center justify-center">Loading...</div>
+});
+const Experience = dynamic(() => import("./components/experience/Experience"), {
+   loading: () => <div className="h-screen flex items-center justify-center">Loading...</div>
+});
+const Project = dynamic(() => import("./components/project/Project"), {
+   loading: () => <div className="h-screen flex items-center justify-center">Loading...</div>
+});
+const Contact = dynamic(() => import("./components/contact/Contact"), {
+   loading: () => <div className="h-screen flex items-center justify-center">Loading...</div>
+});
+const DynamicStars = dynamic(() => import("./components/contact/DynamicStars"), {
+   ssr: false
+});
 
 export default function Home() {
    return (

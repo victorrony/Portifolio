@@ -10,10 +10,6 @@ const Computers = ({ isMobile }) => {
    const { scene } = useGLTF("./desktop_pc/scene.gltf");
    const ref = useRef();
 
-   // useFrame(() => {
-   //    ref.current.rotation.x += isMobile ? 0.001 : 0.002;
-   // });
-
    return (
       <mesh ref={ref}>
          <hemisphereLight intensity={6.15} groundColor="black" />

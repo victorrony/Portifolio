@@ -39,12 +39,7 @@ export default function Hero() {
 
       animateTitle();
 
-      const interval = setInterval(() => {
-         animateTitle();
-      }, 10000);
-
-      return () => clearInterval(interval);
-
+      // Animate social links
       tl.from(
          socialRef.current.children,
          {
@@ -57,6 +52,12 @@ export default function Hero() {
          },
          "-=0.3"
       );
+
+      const interval = setInterval(() => {
+         animateTitle();
+      }, 10000);
+
+      return () => clearInterval(interval);
    }, []);
 
    return (

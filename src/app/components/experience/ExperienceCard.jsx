@@ -3,16 +3,6 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Image from "next/image";
-// import { SectionWrapper } from "../hoc";
-
-const validateGeometry = (geometry) => {
-   if (geometry?.attributes?.position?.array.some((val) => isNaN(val))) {
-      console.error("Geometry position attributes contain NaN values.");
-   }
-};
-
-const exampleGeometry = {};
-validateGeometry(exampleGeometry);
 
 const ExperienceCard = ({ experience }) => {
    const { title, company_name, date, icon, iconBg, points } = experience;
@@ -25,7 +15,7 @@ const ExperienceCard = ({ experience }) => {
             padding: "1.5rem",
             borderRadius: "1rem",
             minWidth: 0,
-            maxWidth: "6 0%",
+            maxWidth: "60%",
          }}
          contentArrowStyle={{ borderRight: "7px solid  #232631" }}
          dateClassName="text-white-100 flex text-[16px] font-semibold"

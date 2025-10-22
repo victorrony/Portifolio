@@ -1,12 +1,15 @@
 "use client";
-import React, { Suspense, useMemo } from "react";
+import React, { Suspense, useMemo, memo, useState, useEffect } from "react";
+import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, Preload, useTexture, Html } from "@react-three/drei";
+import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
 
-const Ball = ({ imgUrl, name }) => {
-   // Só tenta carregar se imgUrl for string válida
+// Componente otimizado com memoization
+const Ball = memo(({ imgUrl, name }) => {
    const isValidImg = typeof imgUrl === "string" && imgUrl.trim() !== "";
-   const [decal] = useTexture(isValidImg ? [imgUrl] : [null]);
+
+   const textureUrl = useMemo(() => (isValidImg ? imgUrl : null), [isValidImg, imgUrl]);
+   const [decal] = useTexture(textureUrl ? [textureUrl] : []);
 
    return (
       <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -19,37 +22,59 @@ const Ball = ({ imgUrl, name }) => {
                <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} scale={1} map={decal} flatShading />
             )}
          </mesh>
-         {!decal && (
-            <Html center>
-               <span style={{ color: "#333", fontSize: 12, background: "#fff8eb", borderRadius: 8, padding: 2 }}>
-                  {name}
-               </span>
-            </Html>
-         )}
       </Float>
    );
-};
+});
 
-const BallCanvas = ({ icon, name }) => {
-   // Verificar se o icon existe antes de renderizar
-   if (!icon) {
-      return (
-         <div className="w-full h-full flex items-center justify-center bg-gray-800 rounded-full">
-            <span className="text-white text-xs">{name}</span>
-         </div>
-      );
+Ball.displayName = "Ball";
+
+// Fallback simples para quando há muitos Canvas
+const SimpleImageIcon = memo(({ icon, name }) => (
+   <div className="w-full h-full flex items-center justify-center bg-tertiar rounded-lg">
+      <Image src={icon} alt={name} width={64} height={64} className="object-contain" />
+   </div>
+));
+
+SimpleImageIcon.displayName = "SimpleImageIcon";
+
+// Limite de Canvas 3D para melhor performance
+const MAX_CANVAS_COUNT = 10;
+
+const BallCanvas = memo(({ icon, name, index }) => {
+   // Detectar se é mobile para usar fallback 2D
+   const [isMobile, setIsMobile] = useState(false);
+
+   useEffect(() => {
+      // Detecta dispositivos mobile (largura < 768px)
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
+      setIsMobile(mediaQuery.matches);
+
+      const handleMediaQueryChange = (event) => {
+         setIsMobile(event.matches);
+      };
+
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+      return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
+   }, []);
+
+   // Usa o index para determinar se deve renderizar Canvas
+   // Mais estável que contador global mutável
+   const shouldUseCanvas = index < MAX_CANVAS_COUNT && !isMobile;
+
+   // Se for mobile, exceder o limite ou não ter ícone, usar imagem simples
+   if (!shouldUseCanvas || !icon) {
+      return <SimpleImageIcon icon={icon} name={name} />;
    }
 
    return (
       <Canvas
          frameloop="demand"
-         dpr={[1, 2]}
+         dpr={[1, 2, 3]}
          gl={{
             preserveDrawingBuffer: true,
             antialias: true,
             alpha: true,
          }}
-         // camera={{ position: [0, 0, 5], fov: 50 }}
       >
          <Suspense fallback={null}>
             <OrbitControls
@@ -63,6 +88,8 @@ const BallCanvas = ({ icon, name }) => {
          <Preload all />
       </Canvas>
    );
-};
+});
+
+BallCanvas.displayName = "BallCanvas";
 
 export default BallCanvas;

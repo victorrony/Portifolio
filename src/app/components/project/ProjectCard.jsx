@@ -1,33 +1,23 @@
-// "use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "@/app/utils/motion";
 import Image from "next/image";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, source_code_link_vercel }) => {
-   const [isClient, setIsClient] = useState(false);
-
-   useEffect(() => {
-      setIsClient(true);
-   }, []);
-
    return (
-      <motion.div
-         className="flex flex-col items-center justify-center "
-         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      <Tilt
+         options={{ max: 45, scale: 1, speed: 450 }}
+         perspective={1000}
+         transitionSpeed={450}
+         scale={1}
       >
-         {isClient && (
-            <Tilt
-               options={{ max: 45, scale: 1, speed: 450 }}
-               // tiltMaxAngleX={45}
-               // tiltMaxAngleY={45}
-               perspective={1000}
-               transitionSpeed={450}
-               scale={1}
-               className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] shadow-card"
-            >
+         <motion.div
+            className="flex flex-col items-center justify-center green-pink-gradient p-[1px] rounded-[20px] w-full"
+            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+         >
+            <div className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] ">
                <div className="relative w-full h-[230px]">
                   <Image
                      src={image}
@@ -75,10 +65,26 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
                      )}
                   </a>
                </div>
-            </Tilt>
-         )}
-      </motion.div>
+            </div>
+         </motion.div>
+      </Tilt>
    );
+};
+
+ProjectCard.propTypes = {
+   index: PropTypes.number.isRequired,
+   name: PropTypes.string.isRequired,
+   description: PropTypes.string.isRequired,
+   tags: PropTypes.arrayOf(
+      PropTypes.shape({
+         name: PropTypes.string.isRequired,
+         icon: PropTypes.string,
+         color: PropTypes.string,
+      })
+   ).isRequired,
+   image: PropTypes.string.isRequired,
+   source_code_link: PropTypes.string.isRequired,
+   source_code_link_vercel: PropTypes.string,
 };
 
 export default ProjectCard;

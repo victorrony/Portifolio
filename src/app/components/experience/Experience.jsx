@@ -1,20 +1,15 @@
 "use client";
 
-import { memo, useRef, useState } from "react";
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { technologies, experiences, tools } from "../../constants/index";
 import ExperienceCard from "./ExperienceCard";
-import { fadeIn, textVariant } from "@/app/utils/motion";
+import { textVariant } from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
-// import BallCanvas from "./BallCanvas";
 import DynamicBallCanvas from "./DynamicBallCanvas";
 
 const Experience = () => {
-   const skillsContainerRef = useRef(null);
-   const toolsContainerRef = useRef(null);
-   const [technologiesState, setTechnologiesState] = useState([...technologies]);
-   const [toolsState, setToolsState] = useState([...tools]);
 
    return (
       <motion.section
@@ -22,7 +17,7 @@ const Experience = () => {
          id="experience"
          initial="hidden"
          whileInView="show"
-         viewport={{ once: false, amount: 0.5 }}
+         viewport={{ once: true, amount: 0.25 }}
          transition={{ staggerChildren: 0.2, delayChildren: 0.2 }}
          exit="hidden"
       >
@@ -44,9 +39,9 @@ const Experience = () => {
 
          <motion.div className="flex flex-col lg:flex-row justify-between w-full mt-10 md:mt-20 xl:mt-10 lg:mt-10 lg:gap-20 gap-10">
             {[
-               { title: "Skills", items: technologiesState, ref: skillsContainerRef },
-               { title: "Tools", items: toolsState, ref: toolsContainerRef },
-            ].map(({ title, items, ref }) => (
+               { title: "Skills", items: technologies },
+               { title: "Tools", items: tools },
+            ].map(({ title, items }) => (
                <motion.div
                   key={title}
                   className="w-full"
@@ -64,7 +59,6 @@ const Experience = () => {
                      {title}
                   </motion.h2>
                   <div
-                     ref={ref}
                      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-5"
                      aria-label={title}
                      role="list"

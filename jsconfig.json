@@ -6,7 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "strict": false,
+    "strict": true,
     "paths": {
       "@/*": [
         "./src/*"

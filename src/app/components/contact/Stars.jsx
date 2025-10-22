@@ -7,11 +7,14 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
    const ref = useRef();
-   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+   // Reduzido de 5000 para 1500 partículas para melhor performance
+   const [sphere] = useState(() => random.inSphere(new Float32Array(1500), { radius: 1.2 }));
 
    useFrame((state, delta) => {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
+      if (ref.current) {
+         ref.current.rotation.x -= delta / 10;
+         ref.current.rotation.y -= delta / 15;
+      }
    });
 
    return (

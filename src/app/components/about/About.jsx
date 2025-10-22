@@ -13,9 +13,9 @@ const About = () => {
          suppressHydrationWarning
          initial="hidden"
          whileInView="show"
-         viewport={{ once: false, amount: 0.5 }} // ajuste here
-         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }} // ajuste here
-         exit="hidden" // nova prop
+         viewport={{ once: true, amount: 0.25 }}
+         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }}
+         exit="hidden"
       >
          <motion.h1 variants={textVariant()} className="text-4xl md:text-6xl font-semibold text-white">
             About Me
@@ -39,4 +39,3 @@ const About = () => {
 };
 
 export default SectionWrapper(About, "about");
-// export default About;

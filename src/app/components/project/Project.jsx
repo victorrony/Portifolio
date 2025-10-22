@@ -6,7 +6,6 @@ import { SectionWrapper } from "@/app/hoc";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../../constants";
 
-// Add container variant for staggering child animations
 const containerVariants = {
    hidden: {},
    show: {
@@ -22,9 +21,9 @@ const Project = () => {
          suppressHydrationWarning
          initial="hidden"
          whileInView="show"
-         viewport={{ once: false, amount: 0.2 }} // ajuste here
-         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }} // ajuste here
-         exit="hidden" // nova prop
+         viewport={{ once: true, amount: 0.2 }}
+         transition={{ staggerChildren: 0.2, delayChildren: 0.2 }}
+         exit="hidden"
       >
          <motion.h1 variants={textVariant()} className="text-4xl md:text-6xl font-semibold text-white">
             Projects
@@ -33,7 +32,6 @@ const Project = () => {
             Below is a selection of projects that showcase my skills and experience. Each project highlights my ability
             to solve problems and deliver high-quality solutions.
          </motion.p>
-         {/* Stagger the child ProjectCard animations using containerVariants */}
          <motion.div variants={containerVariants} className="mt-20 w-full flex flex-wrap gap-7">
             {projects?.map((project, index) => (
                <ProjectCard key={`project-${index}`} index={index} {...project} />
