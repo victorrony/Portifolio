@@ -5,86 +5,118 @@ import Tilt from "react-parallax-tilt";
 import { fadeIn } from "@/app/utils/motion";
 import Image from "next/image";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, source_code_link_vercel }) => {
-   return (
-      <Tilt
-         options={{ max: 45, scale: 1, speed: 450 }}
-         perspective={1000}
-         transitionSpeed={450}
-         scale={1}
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+  source_code_link_vercel,
+}) => {
+  return (
+    <Tilt
+      options={{ max: 45, scale: 1, speed: 450 }}
+      perspective={1000}
+      transitionSpeed={450}
+      scale={1}
+    >
+      <motion.div
+        className="flex flex-col items-center justify-center green-pink-gradient p-[1px] rounded-[20px] w-full"
+        variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       >
-         <motion.div
-            className="flex flex-col items-center justify-center green-pink-gradient p-[1px] rounded-[20px] w-full"
-            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-         >
-            <div className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] ">
-               <div className="relative w-full h-[230px]">
-                  <Image
-                     src={image}
-                     alt="project_image"
-                     sizes="(max-width: 640px) 100vw, 360px"
-                     fill
-                     className="object-cover rounded-2xl"
-                  />
-                  <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-                     <button
-                        onClick={() => window.open(source_code_link, "_blank")}
-                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
-                     >
-                        <Image
-                           src="/assets/github.png"
-                           width={40}
-                           height={40}
-                           alt="source code"
-                           className="object-contain"
-                        />
-                     </button>
-                  </div>
-               </div>
-               <div className="mt-5">
-                  <h3 className="text-white font-bold text-[24px]">{name}</h3>
-                  <p className="mt-2 text-secondary text-[14px]">{description}</p>
-               </div>
-               <div className="mt-4 flex flex-wrap gap-2">
-                  {tags.map(({ name, icon }) => (
-                     <div
-                        key={`${name}-${icon}`}
-                        className={`group relative cursor-pointer flex items-center justify-center gap-0.5 backdrop-blur rounded-xl size-9 lg:size-12 p-2 bg-zinc-800/80 max-lg:hidden`}
-                     >
-                        {icon && <Image src={icon} alt={name} width={100} height={100} className="w-full h-full" />}
-                        <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
-                           {name}
-                        </span>
-                     </div>
-                  ))}
-               </div>
-               <div className="mt-5 flex justify-center items-center gap-3">
-                  <a href={source_code_link_vercel} target="_blank" rel="noopener noreferrer">
-                     {source_code_link_vercel && (
-                        <button className="bg-tertiary border px-4 rounded-lg text-white font-medium">Live Demo</button>
-                     )}
-                  </a>
-               </div>
+        <div className="bg-tertiary p-5 sm:w-[360px] w-full overflow-visible rounded-[20px] ">
+          <div className="relative w-full h-[230px]">
+            <Image
+              src={image}
+              alt="project_image"
+              sizes="(max-width: 640px) 100vw, 360px"
+              fill
+              className="object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <motion.button
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+                whileHover={{
+                  scale: 1.15,
+                  rotate: 8,
+                  boxShadow: "0 0 12px rgba(168,85,247,0.6)",
+                }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <Image
+                  src="/assets/github.png"
+                  width={40}
+                  height={40}
+                  alt="source code"
+                  className="object-contain"
+                />
+              </motion.button>
             </div>
-         </motion.div>
-      </Tilt>
-   );
+          </div>
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[24px]">{name}</h3>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map(({ name, icon }) => (
+              <div
+                key={`${name}-${icon}`}
+                className={`group relative cursor-pointer flex items-center justify-center gap-0.5 backdrop-blur rounded-xl size-9 lg:size-12 p-2 bg-zinc-800/80 max-lg:hidden`}
+              >
+                {icon && (
+                  <Image
+                    src={icon}
+                    alt={name}
+                    width={100}
+                    height={100}
+                    className="w-full h-full"
+                  />
+                )}
+                <span className="text-xs text-white invisible absolute top-[-20px] px-2 py-1 bg-black rounded-md group-hover:visible">
+                  {name}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 flex justify-center items-center gap-3">
+            {source_code_link_vercel && (
+              <motion.a
+                href={source_code_link_vercel}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="relative overflow-hidden bg-tertiary border border-white/10 px-4 py-1.5 rounded-lg text-white font-medium group"
+              >
+                <span className="relative z-10">Live Demo</span>
+                <motion.span className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.a>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </Tilt>
+  );
 };
 
 ProjectCard.propTypes = {
-   index: PropTypes.number.isRequired,
-   name: PropTypes.string.isRequired,
-   description: PropTypes.string.isRequired,
-   tags: PropTypes.arrayOf(
-      PropTypes.shape({
-         name: PropTypes.string.isRequired,
-         icon: PropTypes.string,
-         color: PropTypes.string,
-      })
-   ).isRequired,
-   image: PropTypes.string.isRequired,
-   source_code_link: PropTypes.string.isRequired,
-   source_code_link_vercel: PropTypes.string,
+  index: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      icon: PropTypes.string,
+      color: PropTypes.string,
+    }),
+  ).isRequired,
+  image: PropTypes.string.isRequired,
+  source_code_link: PropTypes.string.isRequired,
+  source_code_link_vercel: PropTypes.string,
 };
 
 export default ProjectCard;
