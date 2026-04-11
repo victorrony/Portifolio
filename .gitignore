@@ -30,3 +30,15 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# playwright mcp logs
+.playwright-mcp/
+
+# temp screenshots / debug images
+*.jpeg
+*.jpg
+!public/**/*.jpeg
+!public/**/*.jpg
+
+# sqlite
+agent_data.db
