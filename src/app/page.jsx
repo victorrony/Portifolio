@@ -7,6 +7,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import SectionProgress from "./components/SectionProgress";
 import { SectionSkeleton } from "./components/SkeletonLoader";
 
+const HeroScrollSequence = dynamic(
+  () => import("./components/hero/HeroScrollSequence"),
+  { ssr: false },
+);
+
 // Lazy load de componentes fora do viewport inicial para melhor performance
 const About = dynamic(() => import("./components/about/About"), {
   loading: () => <SectionSkeleton />,
@@ -20,17 +25,11 @@ const Project = dynamic(() => import("./components/project/Project"), {
 const Contact = dynamic(() => import("./components/contact/Contact"), {
   loading: () => <SectionSkeleton />,
 });
-const DynamicStars = dynamic(
-  () => import("./components/contact/DynamicStars"),
-  {
-    ssr: false,
-  },
-);
 
 export default function Home() {
   return (
     <ErrorBoundary>
-      <div className="relative w-full flex flex-col justify-center text-white items-center m-auto z-0 bg-primary bg-[url('/steve-johnson-jDoTMvp8E_o-unsplash.jpg')] bg-cover bg-center bg-no-repeat">
+      <div className="relative w-full flex flex-col justify-center text-white items-center m-auto z-0 bg-[#030712]">
         <SectionProgress />
         <NavBar />
 
@@ -42,6 +41,9 @@ export default function Home() {
           >
             <Hero />
           </section>
+
+          {/* Canvas Scroll Sequence — efeito Apple entre Hero e About */}
+          <HeroScrollSequence />
 
           <section id="about" aria-label="Sobre mim" className="scroll-mt-20">
             <About />
@@ -71,10 +73,6 @@ export default function Home() {
             <Contact />
           </section>
         </main>
-
-        <div className="fixed inset-0 z-[-1]" aria-hidden="true">
-          <DynamicStars />
-        </div>
       </div>
     </ErrorBoundary>
   );

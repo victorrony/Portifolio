@@ -7,6 +7,10 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const ComputersCanvas = dynamic(() => import("./Computers"), { ssr: false });
+const ParticleBackground = dynamic(
+  () => import("./ParticleBackground").then((m) => m.ParticleBackground),
+  { ssr: false },
+);
 
 export default function Hero() {
   const titleRef = useRef(null);
@@ -46,6 +50,12 @@ export default function Hero() {
       ref={heroRef}
       className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden xl:w-[1280px]"
     >
+      <ParticleBackground
+        count={2500}
+        color="#a5b4fc"
+        speed={0.0003}
+        className="absolute inset-0 -z-10 pointer-events-none"
+      />
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
         className="absolute inset-0 top-[90px] max-w-7xl mx-auto flex flex-row justify-center w-full gap-10 lg:gap-20 xl:gap-10"

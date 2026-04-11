@@ -1,19 +1,15 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { textVariant, fadeIn, revealText } from "@/app/utils/motion";
+import {
+  fadeIn,
+  revealText,
+  staggerContainer,
+  cardItem,
+} from "@/app/utils/motion";
 import { SectionWrapper } from "@/app/hoc";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../../constants";
-
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.2 },
-    opacity: 1,
-    y: 0,
-  },
-};
 
 const Project = () => {
   return (
@@ -42,7 +38,10 @@ const Project = () => {
         high-quality solutions.
       </motion.p>
       <motion.div
-        variants={containerVariants}
+        variants={staggerContainer(0.15, 0.3)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
         className="mt-20 w-full flex flex-wrap gap-7"
       >
         {projects?.map((project, index) => (

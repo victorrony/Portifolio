@@ -1,0 +1,210 @@
+- generic [ref=e3]:
+  - navigation "Navegação por seções" [ref=e4]:
+    - link "Ir para Home" [ref=e6] [cursor=pointer]:
+      - /url: "#home"
+    - link "Ir para About" [ref=e9] [cursor=pointer]:
+      - /url: "#about"
+    - link "Ir para Experience" [ref=e12] [cursor=pointer]:
+      - /url: "#experience"
+    - link "Ir para Projects" [ref=e15] [cursor=pointer]:
+      - /url: "#projects"
+    - link "Ir para Contact" [ref=e18] [cursor=pointer]:
+      - /url: "#contact"
+  - navigation [ref=e20]:
+    - link "Victor Rony" [ref=e21] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e22]:
+      - link "About" [ref=e23] [cursor=pointer]:
+        - /url: "#about"
+      - link "Experience" [ref=e24] [cursor=pointer]:
+        - /url: "#experience"
+      - link "Projects" [ref=e25] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=e26] [cursor=pointer]:
+        - /url: "#contact"
+    - link "Contact" [ref=e27] [cursor=pointer]:
+      - /url: "#contact"
+  - main [ref=e28]:
+    - region "Seção principal com apresentação" [ref=e29]:
+      - generic [ref=e32]:
+        - heading "Hi, my name is Victor Rony. I'm" [level=2] [ref=e33]
+        - heading "Full Stack Developer" [level=1] [ref=e34]
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - link [ref=e37] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/victorfernandes-a41030262/
+              - img [ref=e38]
+          - listitem [ref=e40]:
+            - link [ref=e41] [cursor=pointer]:
+              - /url: https://github.com/victorrony
+              - img [ref=e42]
+          - listitem [ref=e44]:
+            - link [ref=e45] [cursor=pointer]:
+              - /url: https://wa.me/+2319519228
+              - img [ref=e46]
+    - region "Sobre mim" [ref=e50]:
+      - generic [ref=e53]:
+        - heading "About Me" [level=1] [ref=e55]
+        - paragraph [ref=e56]: Sou um desenvolvedor web apaixonado por criar experiências digitais envolventes e funcionais. Com um conhecimento sólido em tecnologias modernas, estou sempre em busca de novos desafios e oportunidades de aprendizado.
+        - generic [ref=e57]:
+          - generic [ref=e60]:
+            - img "Web Developer" [ref=e61]
+            - heading "Web Developer" [level=3] [ref=e62]
+          - generic [ref=e65]:
+            - img "Frontend Developer" [ref=e66]
+            - heading "Frontend Developer" [level=3] [ref=e67]
+          - generic [ref=e70]:
+            - img "Backend Developer" [ref=e71]
+            - heading "Backend Developer" [level=3] [ref=e72]
+          - generic [ref=e75]:
+            - img "Full Stack Developer" [ref=e76]
+            - heading "Full Stack Developer" [level=3] [ref=e77]
+    - region "Experiência profissional" [ref=e78]:
+      - generic [ref=e81]:
+        - heading "Experience" [level=1] [ref=e83]
+        - paragraph [ref=e84]: Where I've built, shipped and learned.
+        - generic [ref=e90]:
+          - heading "Stack" [level=2] [ref=e92]
+          - paragraph [ref=e93]: Technologies I use to build production-grade products
+          - generic [ref=e95]:
+            - generic [ref=e99]:
+              - generic [ref=e102]: Frontend
+              - paragraph [ref=e103]: Interfaces que parecem vivas. Do layout ao micro-detalhe.
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - img "React JS" [ref=e106]
+                  - text: React JS
+                - generic [ref=e107]:
+                  - img "Next.js" [ref=e108]
+                  - text: Next.js
+                - generic [ref=e109]:
+                  - img "TypeScript" [ref=e110]
+                  - text: TypeScript
+                - generic [ref=e111]:
+                  - img "Tailwind CSS" [ref=e112]
+                  - text: Tailwind CSS
+                - generic [ref=e113]:
+                  - img "Motion" [ref=e114]
+                  - text: Motion
+            - generic [ref=e118]:
+              - generic [ref=e121]: Backend
+              - generic [ref=e122]:
+                - generic [ref=e123]:
+                  - img "Node JS" [ref=e124]
+                  - text: Node JS
+                - generic [ref=e125]: PHP
+                - generic [ref=e126]:
+                  - img "MySQL" [ref=e127]
+                  - text: MySQL
+            - generic [ref=e131]:
+              - generic [ref=e134]: 3D & Motion
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - img "Three.js" [ref=e137]
+                  - text: Three.js
+                - generic [ref=e138]: GSAP
+                - generic [ref=e139]: Anime.js
+            - generic [ref=e143]:
+              - generic [ref=e146]: Tools & DevOps
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - img "Git" [ref=e149]
+                  - text: Git
+                - generic [ref=e150]:
+                  - img "GitHub" [ref=e151]
+                  - text: GitHub
+                - generic [ref=e152]:
+                  - img "Vercel" [ref=e153]
+                  - text: Vercel
+                - generic [ref=e154]:
+                  - img "Figma" [ref=e155]
+                  - text: Figma
+                - generic [ref=e156]:
+                  - img "Postman" [ref=e157]
+                  - text: Postman
+                - generic [ref=e158]:
+                  - img "VS Code" [ref=e159]
+                  - text: VS Code
+            - generic [ref=e163]:
+              - generic [ref=e164]: 10+
+              - generic [ref=e165]: Projetos entregues
+    - region "Projetos desenvolvidos" [ref=e166]:
+      - generic [ref=e169]:
+        - heading "Projects" [level=1] [ref=e171]
+        - paragraph [ref=e172]: Below is a selection of projects that showcase my skills and experience. Each project highlights my ability to solve problems and deliver high-quality solutions.
+        - generic [ref=e173]:
+          - generic [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]:
+              - img "project_image" [ref=e177]
+              - button "source code" [ref=e180]:
+                - img "source code" [ref=e181]
+            - generic [ref=e182]:
+              - heading "Shoes E-commerce" [level=3] [ref=e183]
+              - paragraph [ref=e184]: Web application that enables users to search for shoes, view details, and add them to the cart for purchase.
+            - link "Live Demo" [ref=e186]:
+              - /url: https://ecommerce-shoes-kappa.vercel.app/
+              - text: Live Demo
+          - generic [ref=e189] [cursor=pointer]:
+            - generic [ref=e190]:
+              - img "project_image" [ref=e191]
+              - button "source code" [ref=e194]:
+                - img "source code" [ref=e195]
+            - generic [ref=e196]:
+              - heading "Rest_Countries website" [level=3] [ref=e197]
+              - paragraph [ref=e198]: A web application that enables users to search for countries and view details like population, area, and borders.
+            - link "Live Demo" [ref=e200]:
+              - /url: https://rest-countries-theta-lime.vercel.app/
+              - text: Live Demo
+          - generic [ref=e203] [cursor=pointer]:
+            - generic [ref=e204]:
+              - img "project_image" [ref=e205]
+              - button "source code" [ref=e208]:
+                - img "source code" [ref=e209]
+            - generic [ref=e210]:
+              - heading "Space tourism website" [level=3] [ref=e211]
+              - paragraph [ref=e212]: A multi-page website that showcases space tourism and enables users to book a trip to space.
+            - link "Live Demo" [ref=e214]:
+              - /url: https://space-tourism-ten-neon.vercel.app/
+              - text: Live Demo
+          - generic [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]:
+              - img "project_image" [ref=e219]
+              - button "source code" [ref=e222]:
+                - img "source code" [ref=e223]
+            - generic [ref=e224]:
+              - heading "Chat GPT clone" [level=3] [ref=e225]
+              - paragraph [ref=e226]: A clone of the ChatGPT website that enables users to chat with an AI-powered chatbot.
+            - link "Live Demo" [ref=e228]:
+              - /url: https://clone-chat-gpt-rho.vercel.app/
+              - text: Live Demo
+          - generic [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]:
+              - img "project_image" [ref=e233]
+              - button "source code" [ref=e236]:
+                - img "source code" [ref=e237]
+            - generic [ref=e238]:
+              - heading "Listagem de Pessoas e" [level=3] [ref=e239]
+              - paragraph [ref=e240]: A web application that enables users to create and view a list of people and cities.
+            - link "Live Demo" [ref=e242]:
+              - /url: https://listagem-de-pessoas-e-cidades-front.vercel.app
+              - text: Live Demo
+    - region "Contato" [ref=e244]:
+      - generic [ref=e247]:
+        - generic [ref=e249]:
+          - paragraph [ref=e250]: Contact.
+          - heading "Send me a message" [level=3] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]: Your Name
+              - textbox "Your Name" [ref=e255]:
+                - /placeholder: Your full name
+            - generic [ref=e256]:
+              - generic [ref=e257]: Your Email
+              - textbox "Your Email" [ref=e258]:
+                - /placeholder: your@email.com
+            - generic [ref=e259]:
+              - generic [ref=e260]: Your Message
+              - textbox "Your Message" [ref=e261]:
+                - /placeholder: Your message...
+            - button "Send" [ref=e262] [cursor=pointer]
+        - generic [ref=e264]: Loading 3D...

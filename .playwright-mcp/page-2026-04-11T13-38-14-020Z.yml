@@ -1,0 +1,190 @@
+- generic [ref=e3]:
+  - navigation "Navegação por seções" [ref=e4]:
+    - link "Ir para Home" [ref=e6] [cursor=pointer]:
+      - /url: "#home"
+    - link "Ir para About" [ref=e9] [cursor=pointer]:
+      - /url: "#about"
+    - link "Ir para Experience" [ref=e12] [cursor=pointer]:
+      - /url: "#experience"
+    - link "Ir para Projects" [ref=e15] [cursor=pointer]:
+      - /url: "#projects"
+    - link "Ir para Contact" [ref=e18] [cursor=pointer]:
+      - /url: "#contact"
+  - navigation [ref=e20]:
+    - link "Victor Rony" [ref=e21] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e22]:
+      - link "About" [ref=e23] [cursor=pointer]:
+        - /url: "#about"
+      - link "Experience" [ref=e24] [cursor=pointer]:
+        - /url: "#experience"
+      - link "Projects" [ref=e25] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=e26] [cursor=pointer]:
+        - /url: "#contact"
+    - link "Contact" [ref=e27] [cursor=pointer]:
+      - /url: "#contact"
+  - main [ref=e28]:
+    - region "Seção principal com apresentação" [ref=e29]:
+      - generic [ref=e32]:
+        - heading "Hi, my name is Victor Rony. I'm" [level=2] [ref=e33]
+        - heading "Full Stack Developer" [level=1] [ref=e34]
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - link [ref=e37] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/victorfernandes-a41030262/
+              - img [ref=e38]
+          - listitem [ref=e40]:
+            - link [ref=e41] [cursor=pointer]:
+              - /url: https://github.com/victorrony
+              - img [ref=e42]
+          - listitem [ref=e44]:
+            - link [ref=e45] [cursor=pointer]:
+              - /url: https://wa.me/+2319519228
+              - img [ref=e46]
+    - region "Sobre mim" [ref=e50]:
+      - generic [ref=e53]:
+        - heading "About Me" [level=1] [ref=e55]
+        - paragraph [ref=e56]: Sou um desenvolvedor web apaixonado por criar experiências digitais envolventes e funcionais. Com um conhecimento sólido em tecnologias modernas, estou sempre em busca de novos desafios e oportunidades de aprendizado.
+        - generic [ref=e57]:
+          - generic [ref=e60]:
+            - img "Web Developer" [ref=e61]
+            - heading "Web Developer" [level=3] [ref=e62]
+          - generic [ref=e65]:
+            - img "Frontend Developer" [ref=e66]
+            - heading "Frontend Developer" [level=3] [ref=e67]
+          - generic [ref=e70]:
+            - img "Backend Developer" [ref=e71]
+            - heading "Backend Developer" [level=3] [ref=e72]
+          - generic [ref=e75]:
+            - img "Full Stack Developer" [ref=e76]
+            - heading "Full Stack Developer" [level=3] [ref=e77]
+    - region "Experiência profissional" [ref=e78]:
+      - generic [ref=e81]:
+        - heading "Experiences and Skills" [level=1] [ref=e83]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "Skills" [level=2] [ref=e91]
+            - list "Skills" [ref=e92]:
+              - listitem "React JS" [ref=e93]:
+                - generic [ref=e97]: React JS
+                - generic [ref=e101]: 0%
+              - listitem "TypeScript" [ref=e103]:
+                - generic [ref=e107]: TypeScript
+                - generic [ref=e111]: 0%
+              - listitem "Tailwind CSS" [ref=e113]:
+                - generic [ref=e117]: Tailwind CSS
+                - generic [ref=e121]: 0%
+              - listitem "Node JS" [ref=e123]:
+                - generic [ref=e127]: Node JS
+                - generic [ref=e131]: 0%
+              - listitem "MySQL" [ref=e133]:
+                - generic [ref=e137]: MySQL
+                - generic [ref=e141]: 0%
+              - listitem "Three JS" [ref=e143]:
+                - generic [ref=e147]: Three JS
+                - generic [ref=e151]: 0%
+              - listitem "Motion" [ref=e153]:
+                - generic [ref=e157]: Motion
+                - generic [ref=e161]: 0%
+          - generic [ref=e163]:
+            - heading "Tools" [level=2] [ref=e164]
+            - list "Tools" [ref=e165]:
+              - listitem "VS Code" [ref=e166]:
+                - generic [ref=e170]: VS Code
+                - generic [ref=e174]: 0%
+              - listitem "Postman" [ref=e176]:
+                - generic [ref=e180]: Postman
+                - generic [ref=e184]: 0%
+              - listitem "Vercel" [ref=e186]:
+                - generic [ref=e190]: Vercel
+                - generic [ref=e194]: 0%
+              - listitem "Figma" [ref=e196]:
+                - generic [ref=e200]: Figma
+                - generic [ref=e204]: 0%
+              - listitem "git" [ref=e206]:
+                - generic [ref=e210]: git
+                - generic [ref=e214]: 0%
+              - listitem "GitHub" [ref=e216]:
+                - generic [ref=e220]: GitHub
+                - generic [ref=e224]: 0%
+    - region "Projetos desenvolvidos" [ref=e226]:
+      - generic [ref=e229]:
+        - heading "Projects" [level=1] [ref=e231]
+        - paragraph [ref=e232]: Below is a selection of projects that showcase my skills and experience. Each project highlights my ability to solve problems and deliver high-quality solutions.
+        - generic [ref=e233]:
+          - generic [ref=e235] [cursor=pointer]:
+            - generic [ref=e236]:
+              - img "project_image" [ref=e237]
+              - button "source code" [ref=e240]:
+                - img "source code" [ref=e241]
+            - generic [ref=e242]:
+              - heading "Shoes E-commerce" [level=3] [ref=e243]
+              - paragraph [ref=e244]: Web application that enables users to search for shoes, view details, and add them to the cart for purchase.
+            - link "Live Demo" [ref=e246]:
+              - /url: https://ecommerce-shoes-kappa.vercel.app/
+              - text: Live Demo
+          - generic [ref=e249] [cursor=pointer]:
+            - generic [ref=e250]:
+              - img "project_image" [ref=e251]
+              - button "source code" [ref=e254]:
+                - img "source code" [ref=e255]
+            - generic [ref=e256]:
+              - heading "Rest_Countries website" [level=3] [ref=e257]
+              - paragraph [ref=e258]: A web application that enables users to search for countries and view details like population, area, and borders.
+            - link "Live Demo" [ref=e260]:
+              - /url: https://rest-countries-theta-lime.vercel.app/
+              - text: Live Demo
+          - generic [ref=e263] [cursor=pointer]:
+            - generic [ref=e264]:
+              - img "project_image" [ref=e265]
+              - button "source code" [ref=e268]:
+                - img "source code" [ref=e269]
+            - generic [ref=e270]:
+              - heading "Space tourism website" [level=3] [ref=e271]
+              - paragraph [ref=e272]: A multi-page website that showcases space tourism and enables users to book a trip to space.
+            - link "Live Demo" [ref=e274]:
+              - /url: https://space-tourism-ten-neon.vercel.app/
+              - text: Live Demo
+          - generic [ref=e277] [cursor=pointer]:
+            - generic [ref=e278]:
+              - img "project_image" [ref=e279]
+              - button "source code" [ref=e282]:
+                - img "source code" [ref=e283]
+            - generic [ref=e284]:
+              - heading "Chat GPT clone" [level=3] [ref=e285]
+              - paragraph [ref=e286]: A clone of the ChatGPT website that enables users to chat with an AI-powered chatbot.
+            - link "Live Demo" [ref=e288]:
+              - /url: https://clone-chat-gpt-rho.vercel.app/
+              - text: Live Demo
+          - generic [ref=e291] [cursor=pointer]:
+            - generic [ref=e292]:
+              - img "project_image" [ref=e293]
+              - button "source code" [ref=e296]:
+                - img "source code" [ref=e297]
+            - generic [ref=e298]:
+              - heading "Listagem de Pessoas e" [level=3] [ref=e299]
+              - paragraph [ref=e300]: A web application that enables users to create and view a list of people and cities.
+            - link "Live Demo" [ref=e302]:
+              - /url: https://listagem-de-pessoas-e-cidades-front.vercel.app
+              - text: Live Demo
+    - region "Contato" [ref=e304]:
+      - generic [ref=e307]:
+        - generic [ref=e309]:
+          - paragraph [ref=e310]: Contact.
+          - heading "Send me a message" [level=3] [ref=e311]
+          - generic [ref=e312]:
+            - generic [ref=e313]:
+              - generic [ref=e314]: Your Name
+              - textbox "Your Name" [ref=e315]:
+                - /placeholder: What's your good name?
+            - generic [ref=e316]:
+              - generic [ref=e317]: Your Email
+              - textbox "Your Email" [ref=e318]:
+                - /placeholder: What's your web address?
+            - generic [ref=e319]:
+              - generic [ref=e320]: Your Message
+              - textbox "Your Message" [ref=e321]:
+                - /placeholder: What's your web address?
+            - button "Send" [ref=e322] [cursor=pointer]
+        - generic [ref=e324]: Loading 3D...

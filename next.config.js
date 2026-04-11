@@ -7,8 +7,6 @@ const nextConfig = {
   // App Router agora é estável no Next.js 13+
   experimental: {
     appDir: true,
-    optimizeCss: true,
-    optimizePackageImports: ["@react-three/drei", "three", "framer-motion"],
   },
 
   // Otimizações de imagem

@@ -82,7 +82,13 @@ const Contact = () => {
                   name={field}
                   value={form[field]}
                   onChange={handleChange}
-                  placeholder={`What's your ${field === "name" ? "good name" : "web address"}?`}
+                  placeholder={
+                    field === "name"
+                      ? "Your full name"
+                      : field === "email"
+                        ? "your@email.com"
+                        : "Your message..."
+                  }
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>

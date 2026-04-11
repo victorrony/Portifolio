@@ -121,3 +121,38 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+// Card entrance — filho de container com stagger
+export const cardItem = (axis = "y", distance = 40) => ({
+  hidden: {
+    opacity: 0,
+    ...(axis === "y" ? { y: distance } : { x: distance }),
+    scale: 0.96,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 22,
+    },
+  },
+});
+
+// Seção inteira: fade + rise ao entrar na viewport
+export const sectionEntrance = (delay = 0) => ({
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 24,
+      delay,
+    },
+  },
+});

@@ -142,3 +142,42 @@ export const staggerContainer = (
     },
   };
 };
+
+// Card entrance — usado como filho de um container com stagger
+// Combina fade + rise para cards de projects, skills e about
+export const cardItem = (
+  axis: "x" | "y" = "y",
+  distance: number = 40,
+): Variants => ({
+  hidden: {
+    opacity: 0,
+    ...(axis === "y" ? { y: distance } : { x: distance }),
+    scale: 0.96,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 22,
+    },
+  },
+});
+
+// Seção inteira: fade + rise ao entrar na viewport
+export const sectionEntrance = (delay: number = 0): Variants => ({
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 24,
+      delay,
+    },
+  },
+});
