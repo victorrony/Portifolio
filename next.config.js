@@ -4,11 +4,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
-  // App Router agora é estável no Next.js 13+
-  experimental: {
-    appDir: true,
-  },
-
   // Otimizações de imagem
   images: {
     formats: ["image/avif", "image/webp"],
@@ -25,9 +20,6 @@ const nextConfig = {
           }
         : false,
   },
-
-  // Minificação com SWC
-  swcMinify: true,
 
   // Otimização de performance
   reactStrictMode: true,
